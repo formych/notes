@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2 - notes[D[D[D[D[Dcs notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../preface.html"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="../base/base.html"><strong aria-hidden="true">2.</strong> Base</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../base/bit.html"><strong aria-hidden="true">2.1.</strong> 位操作</a></li><li class="chapter-item expanded "><a href="../base/bytes.html"><strong aria-hidden="true">2.2.</strong> 字节</a></li></ol></li><li class="chapter-item expanded "><a href="../biz/biz.html"><strong aria-hidden="true">3.</strong> biz</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../biz/follow.html"><strong aria-hidden="true">3.1.</strong> follow</a></li><li class="chapter-item expanded "><a href="../biz/live.html"><strong aria-hidden="true">3.2.</strong> live</a></li></ol></li><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">4.</strong> DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql/index.html"><strong aria-hidden="true">4.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql/env.html"><strong aria-hidden="true">4.1.1.</strong> 环境</a></li><li class="chapter-item expanded "><a href="../db/mysql/books/MySQL必知必会.html"><strong aria-hidden="true">4.1.2.</strong> MySQL必知必会</a></li></ol></li><li class="chapter-item expanded "><a href="../db/postgre/postgre.html"><strong aria-hidden="true">4.2.</strong> Postgre</a></li><li class="chapter-item expanded "><a href="../db/redis/redis.html"><strong aria-hidden="true">4.3.</strong> Redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/redis/install.html"><strong aria-hidden="true">4.3.1.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../db/redis/cmd.html"><strong aria-hidden="true">4.3.2.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../db/redis/proxy.html"><strong aria-hidden="true">4.3.3.</strong> Proxy</a></li><li class="chapter-item expanded "><a href="../db/redis/faq.html"><strong aria-hidden="true">4.3.4.</strong> FAQ</a></li></ol></li><li class="chapter-item expanded "><a href="../db/mongodb/mongodb.html"><strong aria-hidden="true">4.4.</strong> mongoDB</a></li><li class="chapter-item expanded "><a href="../db/es/elasticsearch.html"><strong aria-hidden="true">4.5.</strong> elastic</a></li><li class="chapter-item expanded "><a href="../db/tidb/tidb.html"><strong aria-hidden="true">4.6.</strong> tidb</a></li><li class="chapter-item expanded "><a href="../db/cluster.html"><strong aria-hidden="true">4.7.</strong> 分表</a></li></ol></li><li class="chapter-item expanded "><a href="../framework/framework.html"><strong aria-hidden="true">5.</strong> Framework</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../framework/design/design.html"><strong aria-hidden="true">5.1.</strong> design</a></li><li class="chapter-item expanded "><a href="../framework/registry/consul.html"><strong aria-hidden="true">5.2.</strong> registry</a></li><li class="chapter-item expanded "><a href="../framework/grpc.html"><strong aria-hidden="true">5.3.</strong> grpc</a></li></ol></li><li class="chapter-item expanded "><a href="../hardware/hardware.html"><strong aria-hidden="true">6.</strong> Hardware</a></li><li class="chapter-item expanded "><a href="../lang/lang.html"><strong aria-hidden="true">7.</strong> Lang</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lang/go/go.html"><strong aria-hidden="true">7.1.</strong> go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lang/go/module/module.html"><strong aria-hidden="true">7.1.1.</strong> module</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lang/go/module/proxy.html"><strong aria-hidden="true">7.1.1.1.</strong> proxy</a></li></ol></li><li class="chapter-item expanded "><a href="../lang/go/faq.html"><strong aria-hidden="true">7.1.2.</strong> faq</a></li><li class="chapter-item expanded "><a href="../lang/go/GoProgrammingLanguage.html"><strong aria-hidden="true">7.1.3.</strong> 圣经</a></li><li class="chapter-item expanded "><a href="../lang/go/http.html"><strong aria-hidden="true">7.1.4.</strong> http</a></li><li class="chapter-item expanded "><a href="../lang/go/tool.html"><strong aria-hidden="true">7.1.5.</strong> tool</a></li><li class="chapter-item expanded "><a href="../lang/go/install.html"><strong aria-hidden="true">7.1.6.</strong> install</a></li><li class="chapter-item expanded "><a href="../lang/go/logrus.html"><strong aria-hidden="true">7.1.7.</strong> logrus</a></li><li class="chapter-item expanded "><a href="../lang/go/graceful.html"><strong aria-hidden="true">7.1.8.</strong> Graceful</a></li><li class="chapter-item expanded "><a href="../lang/go/generic.html"><strong aria-hidden="true">7.1.9.</strong> Generic</a></li></ol></li><li class="chapter-item expanded "><a href="../lang/rust/rust.html"><strong aria-hidden="true">7.2.</strong> rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lang/rust/memory/memory.html"><strong aria-hidden="true">7.2.1.</strong> 内存</a></li></ol></li><li class="chapter-item expanded "><a href="../lang/c/C.html"><strong aria-hidden="true">7.3.</strong> C</a></li><li class="chapter-item expanded "><a href="../lang/JavaScript/js-mod.html"><strong aria-hidden="true">7.4.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lang/JavaScript/js.html"><strong aria-hidden="true">7.4.1.</strong> js</a></li><li class="chapter-item expanded "><a href="../lang/JavaScript/js-tool.html"><strong aria-hidden="true">7.4.2.</strong> tool</a></li></ol></li><li class="chapter-item expanded "><a href="../lang/php/php.html"><strong aria-hidden="true">7.5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="../lang/Markdown/markdown.html"><strong aria-hidden="true">7.6.</strong> Markdown</a></li></ol></li><li class="chapter-item expanded "><a href="../network/network.html"><strong aria-hidden="true">8.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../network/protocol/index.html"><strong aria-hidden="true">8.1.</strong> Protocol</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../network/protocol/protobuf.html"><strong aria-hidden="true">8.1.1.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../network/protocol/golang-protobuf.html"><strong aria-hidden="true">8.1.2.</strong> golang-protobuf</a></li><li class="chapter-item expanded "><a href="../network/protocol/json.html"><strong aria-hidden="true">8.1.3.</strong> JSON</a></li></ol></li><li class="chapter-item expanded "><a href="../network/model.html"><strong aria-hidden="true">8.2.</strong> model</a></li><li class="chapter-item expanded "><a href="../network/socket.html"><strong aria-hidden="true">8.3.</strong> socket</a></li><li class="chapter-item expanded "><a href="../network/io.html"><strong aria-hidden="true">8.4.</strong> io</a></li><li class="chapter-item expanded "><a href="../network/faq.html"><strong aria-hidden="true">8.5.</strong> faq</a></li><li class="chapter-item expanded "><a href="../network/cluster.html"><strong aria-hidden="true">8.6.</strong> cluster</a></li><li class="chapter-item expanded "><a href="../network/lan.html"><strong aria-hidden="true">8.7.</strong> lan</a></li><li class="chapter-item expanded "><a href="../network/hardware.html"><strong aria-hidden="true">8.8.</strong> hardware</a></li><li class="chapter-item expanded "><a href="../network/link.html"><strong aria-hidden="true">8.9.</strong> link</a></li></ol></li><li class="chapter-item expanded "><a href="../os/os.html"><strong aria-hidden="true">9.</strong> OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../os/proxy/proxy.html"><strong aria-hidden="true">9.1.</strong> proxy</a></li><li class="chapter-item expanded "><a href="../os/linux/linux.html"><strong aria-hidden="true">9.2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../os/linux/alpine/alpine.html"><strong aria-hidden="true">9.2.1.</strong> Alpine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../os/linux/alpine/software.html"><strong aria-hidden="true">9.2.1.1.</strong> software</a></li></ol></li><li class="chapter-item expanded "><a href="../os/linux/debian/mirror.html"><strong aria-hidden="true">9.2.2.</strong> Debian</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../os/linux/debian/network.html"><strong aria-hidden="true">9.2.2.1.</strong> 网络</a></li></ol></li><li class="chapter-item expanded "><a href="../os/linux/rhel/centos7.html"><strong aria-hidden="true">9.2.3.</strong> RHEL</a></li><li class="chapter-item expanded "><a href="../os/linux/net/tool.html"><strong aria-hidden="true">9.2.4.</strong> Net</a></li><li class="chapter-item expanded "><a href="../os/linux/install.html"><strong aria-hidden="true">9.2.5.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../os/linux/shell/shell.html"><strong aria-hidden="true">9.2.6.</strong> shell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../os/linux/shell/cmd.html"><strong aria-hidden="true">9.2.6.1.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../os/linux/shell/args.html"><strong aria-hidden="true">9.2.6.2.</strong> args</a></li></ol></li><li class="chapter-item expanded "><a href="../os/linux/disk.html"><strong aria-hidden="true">9.2.7.</strong> Disk</a></li><li class="chapter-item expanded "><a href="../os/linux/encode.html"><strong aria-hidden="true">9.2.8.</strong> Encode</a></li><li class="chapter-item expanded "><a href="../os/linux/filemode.html"><strong aria-hidden="true">9.2.9.</strong> Filemode</a></li><li class="chapter-item expanded "><a href="../os/linux/init.html"><strong aria-hidden="true">9.2.10.</strong> init</a></li><li class="chapter-item expanded "><a href="../os/linux/network.html"><strong aria-hidden="true">9.2.11.</strong> 网络</a></li><li class="chapter-item expanded "><a href="../os/linux/process.html"><strong aria-hidden="true">9.2.12.</strong> 进程</a></li><li class="chapter-item expanded "><a href="../os/linux/ssh.html"><strong aria-hidden="true">9.2.13.</strong> ssh</a></li><li class="chapter-item expanded "><a href="../os/linux/terminal.html"><strong aria-hidden="true">9.2.14.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../os/linux/version.html"><strong aria-hidden="true">9.2.15.</strong> Version</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../problems/index.html"><strong aria-hidden="true">10.</strong> Problems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/cpu/index.html"><strong aria-hidden="true">10.1.</strong> cpu</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/cpu/2018.12.html"><strong aria-hidden="true">10.1.1.</strong> 2018-12</a></li></ol></li><li class="chapter-item expanded "><a href="../problems/im/im.html"><strong aria-hidden="true">10.2.</strong> im</a></li><li class="chapter-item expanded "><a href="../problems/mem/mem.html"><strong aria-hidden="true">10.3.</strong> mem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/mem/2020.04.13.html"><strong aria-hidden="true">10.3.1.</strong> 20200413</a></li><li class="chapter-item expanded "><a href="../problems/mem/2020.04.25.html"><strong aria-hidden="true">10.3.2.</strong> 20200425</a></li></ol></li><li class="chapter-item expanded "><a href="../problems/net/index.html"><strong aria-hidden="true">10.4.</strong> net</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/net/packetloss.html"><strong aria-hidden="true">10.4.1.</strong> packetloss</a></li><li class="chapter-item expanded "><a href="../problems/net/socket/index.html"><strong aria-hidden="true">10.4.2.</strong> socket</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/net/socket/2019.01.html"><strong aria-hidden="true">10.4.2.1.</strong> 201901</a></li><li class="chapter-item expanded "><a href="../problems/net/socket/http.html"><strong aria-hidden="true">10.4.2.2.</strong> http</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../problems/redis/index.html"><strong aria-hidden="true">10.5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../problems/redis/2018.05.html"><strong aria-hidden="true">10.5.1.</strong> 201805</a></li><li class="chapter-item expanded "><a href="../problems/redis/2018.07.html"><strong aria-hidden="true">10.5.2.</strong> 201807</a></li><li class="chapter-item expanded "><a href="../problems/redis/2020.04.html"><strong aria-hidden="true">10.5.3.</strong> 202004</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../vm/vm.html"><strong aria-hidden="true">11.</strong> VM</a></li><li class="chapter-item expanded "><a href="../web/web.html"><strong aria-hidden="true">12.</strong> Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web/browser.html"><strong aria-hidden="true">12.1.</strong> browser</a></li><li class="chapter-item expanded "><a href="../web/mobile.html"><strong aria-hidden="true">12.2.</strong> Mobile</a></li><li class="chapter-item expanded "><a href="../web/cors.html"><strong aria-hidden="true">12.3.</strong> CORS</a></li><li class="chapter-item expanded "><a href="../web/css.html"><strong aria-hidden="true">12.4.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../web/http.html"><strong aria-hidden="true">12.5.</strong> HTTP</a></li><li class="chapter-item expanded "><a href="../web/UI/react-ui.html"><strong aria-hidden="true">12.6.</strong> UI</a></li><li class="chapter-item expanded "><a href="../web/misc.html"><strong aria-hidden="true">12.7.</strong> MISC</a></li></ol></li><li class="chapter-item expanded "><a href="../point/point.html"><strong aria-hidden="true">13.</strong> point</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../point/1.html"><strong aria-hidden="true">13.1.</strong> 1</a></li><li class="chapter-item expanded "><a href="../point/2.html" class="active"><strong aria-hidden="true">13.2.</strong> 2</a></li></ol></li><li class="chapter-item expanded "><a href="../tool/tool.html"><strong aria-hidden="true">14.</strong> Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tool/editor/editor.html"><strong aria-hidden="true">14.1.</strong> Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tool/editor/vim.html"><strong aria-hidden="true">14.1.1.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../tool/editor/vscode.html"><strong aria-hidden="true">14.1.2.</strong> vscode</a></li><li class="chapter-item expanded "><a href="../tool/editor/sublime.html"><strong aria-hidden="true">14.1.3.</strong> Sublime</a></li></ol></li><li class="chapter-item expanded "><a href="../tool/git/git.html"><strong aria-hidden="true">14.2.</strong> git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tool/git/github.html"><strong aria-hidden="true">14.2.1.</strong> github</a></li></ol></li><li class="chapter-item expanded "><a href="../tool/uuid/snowflake.html"><strong aria-hidden="true">14.3.</strong> uuid</a></li><li class="chapter-item expanded "><a href="../tool/shadowsocks.html"><strong aria-hidden="true">14.4.</strong> ss</a></li><li class="chapter-item expanded "><a href="../tool/ops/ops.html"><strong aria-hidden="true">14.5.</strong> OPS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tool/ops/ci.html"><strong aria-hidden="true">14.5.1.</strong> CI</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../cloud/cloud.html"><strong aria-hidden="true">15.</strong> CloudNative</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/books/Docker源码分析.html"><strong aria-hidden="true">15.1.</strong> books</a></li><li class="chapter-item expanded "><a href="../cloud/docker/process.html"><strong aria-hidden="true">15.2.</strong> Docker</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/docker/registry/note.html"><strong aria-hidden="true">15.2.1.</strong> registry</a></li><li class="chapter-item expanded "><a href="../cloud/docker/redis/redis.html"><strong aria-hidden="true">15.2.2.</strong> redis</a></li><li class="chapter-item expanded "><a href="../cloud/docker/install/fedora.html"><strong aria-hidden="true">15.2.3.</strong> install</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/docker/install/install.html"><strong aria-hidden="true">15.2.3.1.</strong> script</a></li></ol></li><li class="chapter-item expanded "><a href="../cloud/docker/history/history.html"><strong aria-hidden="true">15.2.4.</strong> history</a></li><li class="chapter-item expanded "><a href="../cloud/docker/dockerfile/args.html"><strong aria-hidden="true">15.2.5.</strong> dockerfile</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/docker/dockerfile/go.html"><strong aria-hidden="true">15.2.5.1.</strong> go</a></li><li class="chapter-item expanded "><a href="../cloud/docker/dockerfile/port.html"><strong aria-hidden="true">15.2.5.2.</strong> port</a></li><li class="chapter-item expanded "><a href="../cloud/docker/dockerfile/slimming.html"><strong aria-hidden="true">15.2.5.3.</strong> silimming</a></li></ol></li><li class="chapter-item expanded "><a href="../cloud/docker/concepts/concepts.html"><strong aria-hidden="true">15.2.6.</strong> concepts</a></li><li class="chapter-item expanded "><a href="../cloud/docker/cmd/cmd.html"><strong aria-hidden="true">15.2.7.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../cloud/docker/build/build.html"><strong aria-hidden="true">15.2.8.</strong> build</a></li><li class="chapter-item expanded "><a href="../cloud/docker/network.html"><strong aria-hidden="true">15.2.9.</strong> network</a></li><li class="chapter-item expanded "><a href="../cloud/docker/os/os.html"><strong aria-hidden="true">15.2.10.</strong> os</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/docker/os/alpine/alpine.html"><strong aria-hidden="true">15.2.10.1.</strong> alpine</a></li><li class="chapter-item expanded "><a href="../cloud/docker/os/debian/debian.html"><strong aria-hidden="true">15.2.10.2.</strong> debian</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../cloud/k8s/cmd.html"><strong aria-hidden="true">15.3.</strong> Kubernetes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cloud/k8s/config.html"><strong aria-hidden="true">15.3.1.</strong> config</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">notes[D[D[D[D[Dcs notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#面试问题" id="面试问题">面试问题</a></h1>
+<h2><a class="header" href="#网络相关tcpip-http-rpc-socket-负载均衡" id="网络相关tcpip-http-rpc-socket-负载均衡">网络相关(tcp/ip, http, rpc, socket, 负载均衡)</a></h2>
+<pre><code class="language-sh">tcp/ip，http协议分别对应OSI七层网络哪一层
+tcp协议三次握手，四次挥手的过程
+tcp协议和udp协议的区别,优缺点
+浅析tcp协议TimeWait状态，是客户端状态还是服务端状态 如果产生大量TimeWait可能会导致哪些风险，如何解决？
+简单描述http协议？
+HTTP常见的method有哪几种？GET和POST的区别
+详细描述通过浏览器发起一次http请求的完整流程
+http和https协议的区别
+https工作原理
+http1.0, http1.1和http2.0的区别
+如果解决浏览器跨域访问问题
+常见HTTP状态码考察，2xx, 3xx, 4xx, 5xx 304含义
+谈谈自己对restful api的理解
+cookie和session的作用与区别
+[什么是csrf攻击，如何解决](http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html)
+
+socket含义
+socket, tcp/ip, http之间的区别和联系
+rpc协议的含义
+rpc和http协议的区别
+常用的rpc框架thrift, dubbo, grpc
+[服务端负载均衡常用的技术: nginx, lvs, haproxy等](https://blog.csdn.net/cteng/article/details/40862915)
+[常见的负载均衡算法](https://www.cnblogs.com/xrq730/p/5154340.html)
+轮询，随机，哈希,最小连接及其各种变种
+</code></pre>
+<h2><a class="header" href="#操作系统相关" id="操作系统相关">操作系统相关</a></h2>
+<p>(https://zhuanlan.zhihu.com/p/23755202)</p>
+<pre><code class="language-sh">进程和线程的区别
+进程的状态及转换
+进程通信的方式 (共享存储，消息传递，管道通信)
+线程同步的方式
+用户态和内核态的区别
+系统调用的概念
+死锁产生的原因以及处理方法
+什么是虚拟内存
+[同步IO和异步IO的概念](https://www.cnblogs.com/euphie/p/6376508.html)
+[什么是IO多路复用](http://www.cnblogs.com/wt645631686/p/8528912.html)
+IO多路复用技术select, poll, epoll的区别
+</code></pre>
+<h2><a class="header" href="#数据库相关mysql-redis-memcached-mongodb-hbase-elasticsearch" id="数据库相关mysql-redis-memcached-mongodb-hbase-elasticsearch">数据库相关(mysql, redis, memcached, mongodb, hbase, elasticsearch)</a></h2>
+<pre><code class="language-sh">关系型数据库和非关系型数据库区别
+mysql innodb和myIsam的区别
+innodb的存储结构
+B+树和B树的区别
+drop, delete和truncate区别
+mysql索引类型
+https://segmentfault.com/q/1010000003832312
+聚簇索引的存储结构,匹配规则
+自增ID做主键索引的好处
+事务概念, ACID含义
+mysql事务的四种隔离级别,以及实现机制
+悲观锁和乐观锁的区别
+间隙锁概念
+mvcc概念
+mysql如何处理死锁问题
+如何避免sql注入
+浅谈mysql建索引的一些注意事项
+mysql如何实现主从同步
+redis用途
+redis是否支持事务，能否保证ACID
+redis如何保证原子性
+redis能否持久化，有哪两种持久化模式
+redis value有哪些格式
+redis string的实现
+redis如何实现主从同步
+redis集群模式
+什么是一致性哈希
+redis, memcached和 mongodb对比的优缺点
+mongodb的索引类型
+hbase的数据存储结构
+hbase的优缺点及其适用的场景
+简要介绍hbase的 整体架构
+hbase region如何切分
+hbase二级索引要解决的问题，以及优缺点
+es的用途
+什么是倒排索引
+如何在实际业务中合理选择数据库
+</code></pre>
+<h2><a class="header" href="#消息队列相关rabbitmq-activemq-rocketmq-kafka" id="消息队列相关rabbitmq-activemq-rocketmq-kafka">消息队列相关(rabbitmq, activemq, rocketmq, kafka)</a></h2>
+<pre><code class="language-sh">消息队列的作用
+介绍几种常见的消息队列
+各类消息队列的优缺点 (批量操作，消息推拉方式，主从方式，数据可靠性，消息吞吐性能，消息是否有序，是否支持事务，消息路由方式)
+rabbitmq的组成架构, 生产者和消费者如何工作
+kafka的组成架构， 生产者和消费者如何工作
+延迟队列的实现
+
+* rabbitMQ支持对消息的可靠的传递，支持事务，不支持批量的操作
+* 有高的吞吐量，内部采用消息的批量处理，zero-copy机制，数据的存储和获取是本地磁盘顺序批量操作，具有O(1)的复杂度，消息处理的效率很高
+* Redis的订阅发布模式不安全
+&gt; kafka做实时log分析，mq做服务器消息通信，redis做缓存
+
+在应用场景方面，
+RabbitMQ,遵循AMQP协议，由内在高并发的erlanng语言开发，用在实时的对可靠性要求比较高的消息传递上。
+kafka是Linkedin于2010年12月份开源的消息发布订阅系统,它主要用于处理活跃的流式数据,大数据量的数据处理上。
+
+在架构模型方面
+RabbitMQ遵循AMQP协议，RabbitMQ的broker由Exchange,Binding,queue组成，其中exchange和binding组成了消息的路由键；客户端Producer通过连接channel和server进行通信，Consumer从queue获取消息进行消费（长连接，queue有消息会推送到consumer端，consumer循环从输入流读取数据）。rabbitMQ以broker为中心；有消息的确认机制。
+kafka遵从一般的MQ结构，producer，broker，consumer，以consumer为中心，消息的消费信息保存的客户端consumer上，consumer根据消费的点，从broker上批量pull数据；无消息确认机制。
+
+在吞吐量，
+kafka具有高的吞吐量，内部采用消息的批量处理，zero-copy机制，数据的存储和获取是本地磁盘顺序批量操作，具有O(1)的复杂度，消息处理的效率很高。
+rabbitMQ在吞吐量方面稍逊于kafka，他们的出发点不一样，rabbitMQ支持对消息的可靠的传递，支持事务，不支持批量的操作；基于存储的可靠性的要求存储可以采用内存或者硬盘。
+
+在可用性方面
+rabbitMQ支持miror的queue，主queue失效，miror queue接管。
+kafka的broker支持主备模式。
+
+在集群负载均衡方面，
+kafka采用zookeeper对集群中的broker、consumer进行管理，可以注册topic到zookeeper上；通过zookeeper的协调机制，producer保存对应topic的broker信息，可以随机或者轮询发送到broker上；并且producer可以基于语义指定分片，消息发送到broker的某分片上
+rabbitMQ的负载均衡需要单独的loadbalancer进行支持
+</code></pre>
+<h2><a class="header" href="#分布式开发相关" id="分布式开发相关">分布式开发相关</a></h2>
+<pre><code class="language-sh">简单介绍CAP原则
+常见的服务注册发现组件：zookeeper, etcd, consul
+常见的限流算法（令牌桶，漏桶算法，简单计数，滑动窗口）
+简单介绍raft一致性算法
+Paxos算法
+分布式锁
+zookeeper数据节点有哪两种类型
+zookeeper数据版本控制
+zookeeper分布式锁
+熔断， 降级
+RPC
+序列化
+</code></pre>
+<h2><a class="header" href="#其他技能" id="其他技能">其他技能</a></h2>
+<pre><code class="language-sh">shell
+git
+</code></pre>
+<h2><a class="header" href="#其他开放式问题" id="其他开放式问题">其他开放式问题</a></h2>
+<pre><code class="language-sh">简析ELK架构
+如果遇到线上故障的处理流程
+日志的用途日志的使用经验如何定义日志级别
+对接口异常的认知 如何处理异常
+监控与报警
+feed流
+标签
+</code></pre>
+<h3><a class="header" href="#服务器相关" id="服务器相关">服务器相关</a></h3>
+<pre><code class="language-sh">平缓关闭, 重启
+查看服务器状态(top等信息)
+
+服务端常用的技术有linux，mysql，网络，golang，常用算法，redis，kafka，zookeeper，etcd，consul，微服务，分布式，常用架构设计
+linux
+进程
+内存
+中断
+文件
+参考：《操作系统概念》，《linux内核设计与实现》，《鸟哥的Linux》，极客时间 https://time.geekbang.org/column/article/91550（趣谈linux）和https://time.geekbang.org/column/article/80829（linux性能优化）
+MySQL
+1.索引
+2.锁
+3.事务
+4.存储结构
+5.存储引擎
+
+参考：《高性能mysql》，《mysql技术内幕 Innodb存储引擎》，极客时间https://time.geekbang.org/column/article/74687（mysql实战45讲）
+网络
+网络体系结构
+常用协议 tcp，ip，udp，http，rpc
+网络模型 select，poll，epoll
+参考：极客时间https://time.geekbang.org/column/article/9293（趣谈网络协议）
+golang
+语法
+goroutine原理和调度
+内存模型和gc
+锁，channel，select，defer，slice，map，new，make，context，interface，waitgroup，反射
+面向对象设计原则，常用设计模式
+golang常用库，golang社区，发展
+面试题中的骚操作
+参考：《golang圣经》，极客时间 https://time.geekbang.org/column/article/12959（go语言核心36讲），golang面试题
+
+###常用算法
+1.栈，队列，排序，查找
+2.树
+3.递归，动态规划，贪心算法
+参考：leecode，牛客网 专项练习，极客时间 https://time.geekbang.org/course/intro/130（算法面试40讲）和https://time.geekbang.org/column/article/81230（数据结构和算法之美）
+8. 算法
+链表转置
+循环链表
+    1.标志位
+    2.(rear + 1) / max == front
+    3.length
+redis
+1.数据结构
+2.事件模型
+3.主从
+4.codis 分布式
+分布式
+zookeeper，kafka，consul，etcd
+https://www.zhihu.com/question/306730610/answer/582974254（分布式锁）
+常用架构设计
+关系，秒杀，账户，资料，商城，送礼，背包
+参考：映客多个系统设计，极客时间https://time.geekbang.org/column/article/40726（如何设计一个秒杀系统）
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../point/1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../tool/tool.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../point/1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../tool/tool.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

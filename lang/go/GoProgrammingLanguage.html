@@ -1,0 +1,679 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>圣经 - notes[D[D[D[D[Dcs notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../preface.html"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="../../base/base.html"><strong aria-hidden="true">2.</strong> Base</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../base/bit.html"><strong aria-hidden="true">2.1.</strong> 位操作</a></li><li class="chapter-item expanded "><a href="../../base/bytes.html"><strong aria-hidden="true">2.2.</strong> 字节</a></li></ol></li><li class="chapter-item expanded "><a href="../../biz/biz.html"><strong aria-hidden="true">3.</strong> biz</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../biz/follow.html"><strong aria-hidden="true">3.1.</strong> follow</a></li><li class="chapter-item expanded "><a href="../../biz/live.html"><strong aria-hidden="true">3.2.</strong> live</a></li></ol></li><li class="chapter-item expanded "><a href="../../db/index.html"><strong aria-hidden="true">4.</strong> DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/mysql/index.html"><strong aria-hidden="true">4.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/mysql/env.html"><strong aria-hidden="true">4.1.1.</strong> 环境</a></li><li class="chapter-item expanded "><a href="../../db/mysql/books/MySQL必知必会.html"><strong aria-hidden="true">4.1.2.</strong> MySQL必知必会</a></li></ol></li><li class="chapter-item expanded "><a href="../../db/postgre/postgre.html"><strong aria-hidden="true">4.2.</strong> Postgre</a></li><li class="chapter-item expanded "><a href="../../db/redis/redis.html"><strong aria-hidden="true">4.3.</strong> Redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../db/redis/install.html"><strong aria-hidden="true">4.3.1.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../../db/redis/cmd.html"><strong aria-hidden="true">4.3.2.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../db/redis/proxy.html"><strong aria-hidden="true">4.3.3.</strong> Proxy</a></li><li class="chapter-item expanded "><a href="../../db/redis/faq.html"><strong aria-hidden="true">4.3.4.</strong> FAQ</a></li></ol></li><li class="chapter-item expanded "><a href="../../db/mongodb/mongodb.html"><strong aria-hidden="true">4.4.</strong> mongoDB</a></li><li class="chapter-item expanded "><a href="../../db/es/elasticsearch.html"><strong aria-hidden="true">4.5.</strong> elastic</a></li><li class="chapter-item expanded "><a href="../../db/tidb/tidb.html"><strong aria-hidden="true">4.6.</strong> tidb</a></li><li class="chapter-item expanded "><a href="../../db/cluster.html"><strong aria-hidden="true">4.7.</strong> 分表</a></li></ol></li><li class="chapter-item expanded "><a href="../../framework/framework.html"><strong aria-hidden="true">5.</strong> Framework</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../framework/design/design.html"><strong aria-hidden="true">5.1.</strong> design</a></li><li class="chapter-item expanded "><a href="../../framework/registry/consul.html"><strong aria-hidden="true">5.2.</strong> registry</a></li><li class="chapter-item expanded "><a href="../../framework/grpc.html"><strong aria-hidden="true">5.3.</strong> grpc</a></li></ol></li><li class="chapter-item expanded "><a href="../../hardware/hardware.html"><strong aria-hidden="true">6.</strong> Hardware</a></li><li class="chapter-item expanded "><a href="../../lang/lang.html"><strong aria-hidden="true">7.</strong> Lang</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lang/go/go.html"><strong aria-hidden="true">7.1.</strong> go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lang/go/module/module.html"><strong aria-hidden="true">7.1.1.</strong> module</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lang/go/module/proxy.html"><strong aria-hidden="true">7.1.1.1.</strong> proxy</a></li></ol></li><li class="chapter-item expanded "><a href="../../lang/go/faq.html"><strong aria-hidden="true">7.1.2.</strong> faq</a></li><li class="chapter-item expanded "><a href="../../lang/go/GoProgrammingLanguage.html" class="active"><strong aria-hidden="true">7.1.3.</strong> 圣经</a></li><li class="chapter-item expanded "><a href="../../lang/go/http.html"><strong aria-hidden="true">7.1.4.</strong> http</a></li><li class="chapter-item expanded "><a href="../../lang/go/tool.html"><strong aria-hidden="true">7.1.5.</strong> tool</a></li><li class="chapter-item expanded "><a href="../../lang/go/install.html"><strong aria-hidden="true">7.1.6.</strong> install</a></li><li class="chapter-item expanded "><a href="../../lang/go/logrus.html"><strong aria-hidden="true">7.1.7.</strong> logrus</a></li><li class="chapter-item expanded "><a href="../../lang/go/graceful.html"><strong aria-hidden="true">7.1.8.</strong> Graceful</a></li><li class="chapter-item expanded "><a href="../../lang/go/generic.html"><strong aria-hidden="true">7.1.9.</strong> Generic</a></li></ol></li><li class="chapter-item expanded "><a href="../../lang/rust/rust.html"><strong aria-hidden="true">7.2.</strong> rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lang/rust/memory/memory.html"><strong aria-hidden="true">7.2.1.</strong> 内存</a></li></ol></li><li class="chapter-item expanded "><a href="../../lang/c/C.html"><strong aria-hidden="true">7.3.</strong> C</a></li><li class="chapter-item expanded "><a href="../../lang/JavaScript/js-mod.html"><strong aria-hidden="true">7.4.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lang/JavaScript/js.html"><strong aria-hidden="true">7.4.1.</strong> js</a></li><li class="chapter-item expanded "><a href="../../lang/JavaScript/js-tool.html"><strong aria-hidden="true">7.4.2.</strong> tool</a></li></ol></li><li class="chapter-item expanded "><a href="../../lang/php/php.html"><strong aria-hidden="true">7.5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="../../lang/Markdown/markdown.html"><strong aria-hidden="true">7.6.</strong> Markdown</a></li></ol></li><li class="chapter-item expanded "><a href="../../network/network.html"><strong aria-hidden="true">8.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../network/protocol/index.html"><strong aria-hidden="true">8.1.</strong> Protocol</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../network/protocol/protobuf.html"><strong aria-hidden="true">8.1.1.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../../network/protocol/golang-protobuf.html"><strong aria-hidden="true">8.1.2.</strong> golang-protobuf</a></li><li class="chapter-item expanded "><a href="../../network/protocol/json.html"><strong aria-hidden="true">8.1.3.</strong> JSON</a></li></ol></li><li class="chapter-item expanded "><a href="../../network/model.html"><strong aria-hidden="true">8.2.</strong> model</a></li><li class="chapter-item expanded "><a href="../../network/socket.html"><strong aria-hidden="true">8.3.</strong> socket</a></li><li class="chapter-item expanded "><a href="../../network/io.html"><strong aria-hidden="true">8.4.</strong> io</a></li><li class="chapter-item expanded "><a href="../../network/faq.html"><strong aria-hidden="true">8.5.</strong> faq</a></li><li class="chapter-item expanded "><a href="../../network/cluster.html"><strong aria-hidden="true">8.6.</strong> cluster</a></li><li class="chapter-item expanded "><a href="../../network/lan.html"><strong aria-hidden="true">8.7.</strong> lan</a></li><li class="chapter-item expanded "><a href="../../network/hardware.html"><strong aria-hidden="true">8.8.</strong> hardware</a></li><li class="chapter-item expanded "><a href="../../network/link.html"><strong aria-hidden="true">8.9.</strong> link</a></li></ol></li><li class="chapter-item expanded "><a href="../../os/os.html"><strong aria-hidden="true">9.</strong> OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../os/proxy/proxy.html"><strong aria-hidden="true">9.1.</strong> proxy</a></li><li class="chapter-item expanded "><a href="../../os/linux/linux.html"><strong aria-hidden="true">9.2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../os/linux/alpine/alpine.html"><strong aria-hidden="true">9.2.1.</strong> Alpine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../os/linux/alpine/software.html"><strong aria-hidden="true">9.2.1.1.</strong> software</a></li></ol></li><li class="chapter-item expanded "><a href="../../os/linux/debian/mirror.html"><strong aria-hidden="true">9.2.2.</strong> Debian</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../os/linux/debian/network.html"><strong aria-hidden="true">9.2.2.1.</strong> 网络</a></li></ol></li><li class="chapter-item expanded "><a href="../../os/linux/rhel/centos7.html"><strong aria-hidden="true">9.2.3.</strong> RHEL</a></li><li class="chapter-item expanded "><a href="../../os/linux/net/tool.html"><strong aria-hidden="true">9.2.4.</strong> Net</a></li><li class="chapter-item expanded "><a href="../../os/linux/install.html"><strong aria-hidden="true">9.2.5.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../../os/linux/shell/shell.html"><strong aria-hidden="true">9.2.6.</strong> shell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../os/linux/shell/cmd.html"><strong aria-hidden="true">9.2.6.1.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../os/linux/shell/args.html"><strong aria-hidden="true">9.2.6.2.</strong> args</a></li></ol></li><li class="chapter-item expanded "><a href="../../os/linux/disk.html"><strong aria-hidden="true">9.2.7.</strong> Disk</a></li><li class="chapter-item expanded "><a href="../../os/linux/encode.html"><strong aria-hidden="true">9.2.8.</strong> Encode</a></li><li class="chapter-item expanded "><a href="../../os/linux/filemode.html"><strong aria-hidden="true">9.2.9.</strong> Filemode</a></li><li class="chapter-item expanded "><a href="../../os/linux/init.html"><strong aria-hidden="true">9.2.10.</strong> init</a></li><li class="chapter-item expanded "><a href="../../os/linux/network.html"><strong aria-hidden="true">9.2.11.</strong> 网络</a></li><li class="chapter-item expanded "><a href="../../os/linux/process.html"><strong aria-hidden="true">9.2.12.</strong> 进程</a></li><li class="chapter-item expanded "><a href="../../os/linux/ssh.html"><strong aria-hidden="true">9.2.13.</strong> ssh</a></li><li class="chapter-item expanded "><a href="../../os/linux/terminal.html"><strong aria-hidden="true">9.2.14.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../../os/linux/version.html"><strong aria-hidden="true">9.2.15.</strong> Version</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../problems/index.html"><strong aria-hidden="true">10.</strong> Problems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/cpu/index.html"><strong aria-hidden="true">10.1.</strong> cpu</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/cpu/2018.12.html"><strong aria-hidden="true">10.1.1.</strong> 2018-12</a></li></ol></li><li class="chapter-item expanded "><a href="../../problems/im/im.html"><strong aria-hidden="true">10.2.</strong> im</a></li><li class="chapter-item expanded "><a href="../../problems/mem/mem.html"><strong aria-hidden="true">10.3.</strong> mem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/mem/2020.04.13.html"><strong aria-hidden="true">10.3.1.</strong> 20200413</a></li><li class="chapter-item expanded "><a href="../../problems/mem/2020.04.25.html"><strong aria-hidden="true">10.3.2.</strong> 20200425</a></li></ol></li><li class="chapter-item expanded "><a href="../../problems/net/index.html"><strong aria-hidden="true">10.4.</strong> net</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/net/packetloss.html"><strong aria-hidden="true">10.4.1.</strong> packetloss</a></li><li class="chapter-item expanded "><a href="../../problems/net/socket/index.html"><strong aria-hidden="true">10.4.2.</strong> socket</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/net/socket/2019.01.html"><strong aria-hidden="true">10.4.2.1.</strong> 201901</a></li><li class="chapter-item expanded "><a href="../../problems/net/socket/http.html"><strong aria-hidden="true">10.4.2.2.</strong> http</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../problems/redis/index.html"><strong aria-hidden="true">10.5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../problems/redis/2018.05.html"><strong aria-hidden="true">10.5.1.</strong> 201805</a></li><li class="chapter-item expanded "><a href="../../problems/redis/2018.07.html"><strong aria-hidden="true">10.5.2.</strong> 201807</a></li><li class="chapter-item expanded "><a href="../../problems/redis/2020.04.html"><strong aria-hidden="true">10.5.3.</strong> 202004</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../vm/vm.html"><strong aria-hidden="true">11.</strong> VM</a></li><li class="chapter-item expanded "><a href="../../web/web.html"><strong aria-hidden="true">12.</strong> Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../web/browser.html"><strong aria-hidden="true">12.1.</strong> browser</a></li><li class="chapter-item expanded "><a href="../../web/mobile.html"><strong aria-hidden="true">12.2.</strong> Mobile</a></li><li class="chapter-item expanded "><a href="../../web/cors.html"><strong aria-hidden="true">12.3.</strong> CORS</a></li><li class="chapter-item expanded "><a href="../../web/css.html"><strong aria-hidden="true">12.4.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../../web/http.html"><strong aria-hidden="true">12.5.</strong> HTTP</a></li><li class="chapter-item expanded "><a href="../../web/UI/react-ui.html"><strong aria-hidden="true">12.6.</strong> UI</a></li><li class="chapter-item expanded "><a href="../../web/misc.html"><strong aria-hidden="true">12.7.</strong> MISC</a></li></ol></li><li class="chapter-item expanded "><a href="../../point/point.html"><strong aria-hidden="true">13.</strong> point</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../point/1.html"><strong aria-hidden="true">13.1.</strong> 1</a></li><li class="chapter-item expanded "><a href="../../point/2.html"><strong aria-hidden="true">13.2.</strong> 2</a></li></ol></li><li class="chapter-item expanded "><a href="../../tool/tool.html"><strong aria-hidden="true">14.</strong> Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tool/editor/editor.html"><strong aria-hidden="true">14.1.</strong> Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tool/editor/vim.html"><strong aria-hidden="true">14.1.1.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../tool/editor/vscode.html"><strong aria-hidden="true">14.1.2.</strong> vscode</a></li><li class="chapter-item expanded "><a href="../../tool/editor/sublime.html"><strong aria-hidden="true">14.1.3.</strong> Sublime</a></li></ol></li><li class="chapter-item expanded "><a href="../../tool/git/git.html"><strong aria-hidden="true">14.2.</strong> git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tool/git/github.html"><strong aria-hidden="true">14.2.1.</strong> github</a></li></ol></li><li class="chapter-item expanded "><a href="../../tool/uuid/snowflake.html"><strong aria-hidden="true">14.3.</strong> uuid</a></li><li class="chapter-item expanded "><a href="../../tool/shadowsocks.html"><strong aria-hidden="true">14.4.</strong> ss</a></li><li class="chapter-item expanded "><a href="../../tool/ops/ops.html"><strong aria-hidden="true">14.5.</strong> OPS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tool/ops/ci.html"><strong aria-hidden="true">14.5.1.</strong> CI</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../cloud/cloud.html"><strong aria-hidden="true">15.</strong> CloudNative</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/books/Docker源码分析.html"><strong aria-hidden="true">15.1.</strong> books</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/process.html"><strong aria-hidden="true">15.2.</strong> Docker</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/docker/registry/note.html"><strong aria-hidden="true">15.2.1.</strong> registry</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/redis/redis.html"><strong aria-hidden="true">15.2.2.</strong> redis</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/install/fedora.html"><strong aria-hidden="true">15.2.3.</strong> install</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/docker/install/install.html"><strong aria-hidden="true">15.2.3.1.</strong> script</a></li></ol></li><li class="chapter-item expanded "><a href="../../cloud/docker/history/history.html"><strong aria-hidden="true">15.2.4.</strong> history</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/dockerfile/args.html"><strong aria-hidden="true">15.2.5.</strong> dockerfile</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/docker/dockerfile/go.html"><strong aria-hidden="true">15.2.5.1.</strong> go</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/dockerfile/port.html"><strong aria-hidden="true">15.2.5.2.</strong> port</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/dockerfile/slimming.html"><strong aria-hidden="true">15.2.5.3.</strong> silimming</a></li></ol></li><li class="chapter-item expanded "><a href="../../cloud/docker/concepts/concepts.html"><strong aria-hidden="true">15.2.6.</strong> concepts</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/cmd/cmd.html"><strong aria-hidden="true">15.2.7.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/build/build.html"><strong aria-hidden="true">15.2.8.</strong> build</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/network.html"><strong aria-hidden="true">15.2.9.</strong> network</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/os/os.html"><strong aria-hidden="true">15.2.10.</strong> os</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/docker/os/alpine/alpine.html"><strong aria-hidden="true">15.2.10.1.</strong> alpine</a></li><li class="chapter-item expanded "><a href="../../cloud/docker/os/debian/debian.html"><strong aria-hidden="true">15.2.10.2.</strong> debian</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../cloud/k8s/cmd.html"><strong aria-hidden="true">15.3.</strong> Kubernetes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cloud/k8s/config.html"><strong aria-hidden="true">15.3.1.</strong> config</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">notes[D[D[D[D[Dcs notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#go-programming-language" id="go-programming-language">Go Programming Language</a></h1>
+<p>前言</p>
+<pre><code>一·语言特性
+
+    1.特性
+        垃圾回收
+        包系统
+        一等函数    len make new copy cap delete
+        词法作用域
+        系统调用接口
+        UTF-8字符串编码
+    2.不支持
+        隐式数值类型强制转换
+        析构和构造函数
+        运算重载符
+        形参默认值
+        继承
+        泛型
+        异常
+        宏
+        函数注记
+        线程局部存储
+</code></pre>
+<p>TUTORIAL</p>
+<pre><code>一·go 工具链
+    go run            complie + execute
+    go build        compile + save
+    go install        compile + save(bin)
+    go get            git clone + go install
+
+    gofmt
+    goimports
+
+二·关键字
+    functions        func
+    variables        var
+    constants        const
+    types            type
+三·表达式
+    无表达式    j = i++
+    没后缀        --i
+四·琐碎的知识点
+    os.Args[]
+    range   _
+    strings.Join(os.Args[1:], &quot; &quot;)
+    strings.Split()
+
+    ioutil.ReadFile()
+    ioutil.ReadAll()
+    io.Copy()
+    strconv.Atoi()
+
+    变量声明, 实际中使用的情况
+    s := &quot;&quot;                    短变量声明, 在方法内使用，不在包级别使用
+    var s string             默认zero value
+    var s = &quot;&quot;                多个变量
+    var s string = &quot;&quot;        类型不同
+</code></pre>
+<p>程序结构</p>
+<pre><code>一·声明
+    var const type func
+    作用域
+        局部级别    package-level
+        包级别        local
+二·变量
+    变量声明
+        var name type = expression
+    短变量声明 适用于local variables
+        name := expression
+    指针
+        指向局部变量的指针，返回，仍然有效
+    通过内建new创建变量
+        new(T)        unamed variable of type T, initiakizes zero value of T, return  its address, which is a value of type *T
+        p := new(int)    0
+        *p = 2
+    生命周期
+        包级别的是在整个执行过程
+        local是动态的
+        变量是否一直有效,取决于他是否可达(reachable)
+
+        head-stack, memory-allocation
+    赋值
+        =
+        元祖赋值
+            x, y = y, x
+
+            v, ok = m[key]                    //map lookup
+            v, ok = x.(T)                    //type assertion
+            v, ok = &lt;-ch                    //channel receive
+            _, err = io.Copry(dst, src)     //blank identifier 
+        赋值性
+            同类型
+            nil &lt;=&gt; interface, reference
+
+    Type Declarations
+        type name underlying-type
+        类性转换
+            改变变类型
+            T(x)    //converts x To type T, both have the same underlying type, or unnamed poiter types that point to variables of  the same underlying type 
+            数值, 字符串, some slice types各自互转
+            类型不同不能直接比较, 但可以和underlying type比较
+        type's method
+            给自定义的类型加上方法
+                func (c Celsius) String() string{ return fmt.Sprintf(&quot;%g℃&quot;, c)}
+
+    包和文件
+        是否被包外访问, 大小写
+        包的初始化
+            package-level 变量开始
+            引用的包优先
+            func init() 默认调用, 不可调用引用
+            在main之前, 所有的包必须初始化
+
+    作用域, 生命周期
+        The scope of a declaration is a region of the program text; it is a compile-time property.
+        The lifetime of a variable is the range of time during execution when the variable can be referred to by other parts of the program; it is a run-time property.
+
+        块作用域
+            for if switch select  {}
+</code></pre>
+<p>基础数据类型</p>
+<pre><code>Go four types:
+    basic types: numbers, strings and boolean
+    aggregate types: arrays, structs
+    reference types: pointers, slices, maps, functions and channels
+    interface types
+
+Integer
+    int8, int16, int32, int64
+    uint8, uint16, uint32, uint64
+
+    run &lt;==&gt; int32    byte &lt;==&gt; int8    unsigned integer type uintptr
+
+    %b     %[1] %#[1]
+Folat
+    float32, float64
+Complex
+    complex64, complex128
+Booleans
+    true, false
+
+Strings
+    1.不可变的字节序列, immutable
+    2.字符字面量 
+    3.utf8.RuneCountInString(s)   utf8.DecodeRuneInString
+    4.重要的4个库   strings, bytes, strconv, unicode
+
+        \xhh         对应小于256的码点
+        \uhhhh         对应16位的码点
+        \Uhhhhhhhh    对应32为的码点
+
+        0x        \xhh    16进制
+        0        \ooo    八进制
+
+    字符串和数值互转
+        integer to string
+            x := 123
+            y := fmt.Sprintf(&quot;%d&quot;, x)
+            fmt.Println(y, strconv.Itoa(x))                  //&quot;123 123&quot;
+            fmt.Println(strconv.FormatInt(int64(x), 2))        //&quot;1111011&quot;
+        string to integer
+            x, err := strconv.Atoi(&quot;123&quot;)
+            y, err := strconv.ParseInt(&quot;123&quot;, 10, 64)
+
+    常量
+        basic type: boolean, string, number
+        compile time
+        constant generator    iota
+
+        enums    枚举
+
+        Print         Println         Printf        //输出到标准输出
+        Fprint      Fprintln         Fprintf        //输出到指定位置
+        Sprint         Sprintln         Sprintf        //输出为字符串
+</code></pre>
+<p>Composite Types</p>
+<pre><code>aggregate types: arrays, structs                                   //fixed size
+referrence types: maps, slices, pointers, channels, functions     //maps slices dynamic size
+
+数组
+    数组类型
+    [3]int, [...]int{1, 2, 3}
+
+    类型转换
+        []byte(&quot;X&quot;)  &lt;=&gt; &quot;x&quot; convert to []byte
+    Go里面的数组是按值传递的, 其他语言是按指针或者引用传递的
+        func zero(arr [3]int)
+        arr 是值拷贝而不是指向原始的数组
+        要指向原始的, 通过指针来实现
+
+Slices
+    three components：
+        poiter, length, capacity
+        poiter: a poiter to an element of an array
+        length:    the number of slice elements
+        capacity: the start of slice and the end of underlying array
+
+    不能直接用==去比较slice是否相同的元素
+
+    bytes.Equal用于比较[]byte, 其他类型的需要我们自定义比较
+
+    append(dst, src) 当len + 1 &gt;  cap时会动态改变slice的大小, 重新分配空间,改变原始的指向
+
+Maps
+    底层是hash table, k/v
+    k必须是可比较的
+    maps是不能比较的
+    每次迭代结果是无序的
+    1.    ages := make(map[string]int)
+    2.    ages := map[string]int {&quot;alice&quot;: 31, &quot;charlie&quot;: 33,}
+    3.    make(map[string]map[string]bool)    嵌套的map
+
+    ok模式判断是否存在该键值
+    if age, ok != ages[&quot;ages&quot;]; !ok {}
+
+Structs 
+    按值传递
+    指针
+        type Point struct{X, Y int}
+
+        p = &amp;Point{1, 2}  &lt;=&gt; pp := new(Point)  *pp = Point{1, 2}
+        q = Point{1, 3}
+
+        p.X  q.X     (*p).X
+    可以比较
+    可以做map的key
+    struct embedding and anonymous fields
+
+Text and HTML Templates
+    html: 自动转义元字符, template.HTML会不自动转义
+</code></pre>
+<p>函数</p>
+<pre><code>函数签名:参数, 返回值
+按值传递
+不可比较
+有自己的类型
+
+递归:
+    别的语言采用固定大小的栈来递归, Go用动态大小的栈实现递归调用
+
+    判断结束条件, 处理要写在方法开头, 然后再递归调用
+
+多返回值
+    Gc 会回收未使用的内存, 但是不会回收系统资源或者网络连接, 需要明确的关闭
+    resp.Body.Close()
+    _ 可以忽略使用
+
+    带名字的返回值可以直接return, 不用跟其他的
+        bare return &lt;=&gt; return each of the named result variables
+
+错误
+
+函数值(类似js中的函数)
+    有自己的类型
+    可以赋值给其他变量
+    可以当作参数
+    var f = func{}
+
+匿名函数
+    闭包, 函数字面量, 做参数的函数,函数变量
+    捕获迭代变量
+        在循环结束前, 回调函数会延迟执行, 所以变量的值已经是最后的值了
+
+变长参数
+    val ...int
+defer
+    在return之前,执行该函数, 多个defer按照栈的顺序执行
+
+panic
+    compile time: 类型错误
+    run time: 数组越界, nil pointer dereference
+
+    会执行以前定义的defer内容
+
+    用于严重的错误, 其他的可预知的错误使用以前的错误机制(expected), 避免程序员的崩溃
+
+
+recover
+
+    在defer中调用recover, deferred函数内部得到panic的信息
+</code></pre>
+<p>Methods</p>
+<pre><code>OOP
+    an object is simpley a value or variable that has methods, and a method is a function associated with a particular type.
+
+Two principles
+    1.encapsulation        封装
+    2.composition        组合
+
+声明
+    1.方法接收者
+    2.选择器
+    可以给任何类型定义方法, 除了pointer, interface
+带指针接收器的方法
+    避免值拷贝, 浪费资源
+    在声明方法时，类型名本身不能是指针类型, 避免歧义  
+    
+        type P *int
+        func (P) f() {} //编译报错
+
+nil is a valid receiver value
+
+组装类型通过嵌入结构体
+
+方法值和表达式
+    方法值: p.Distance
+    表达式: Ponit.Distance    T.f    *T.f
+
+例子: 位向量类型
+
+封装
+    struct
+</code></pre>
+<p>接口</p>
+<pre><code>接口作为合约
+    满足接口中的合约, 即为该接口类型
+
+Interface Types
+    接口类型具体描述了一系列方法的集合，一个实现了这些方法的具体类型是这个接口类型的实例。
+
+    接口嵌入
+
+接口满足
+    一个类型如果拥有一个接口需要的所有方法，那么这个类型就实现了这个接口
+    接口指定
+        var w io.Writer
+        w = os.Stdout           // OK: *os.File has Write method
+        w = new(bytes.Buffer)   // OK: *bytes.Buffer has Write method
+        w = time.Second         // compile error: time.Duration lacks Write method
+
+        var rwc io.ReadWriteCloser
+        rwc = os.Stdout         // OK: *os.File has Read, Write, Close methods
+        rwc = new(bytes.Buffer) // compile error: *bytes.Buffer lacks Close method
+
+        w = rwc                 // OK: io.ReadWriteCloser has Write method
+        rwc = w                 // compile error: io.Writer lacks Close method
+
+        右边比左边的大可以赋值, 反之不行
+接口值
+    包含具体的动态类型和那个类型的动态值
+    类型描述符
+
+    var w io.Writer     //声明接口
+    w = os.Stdout        //赋值
+
+    类型断言
+接口的2種用途
+    1.用于隐藏具体类型的细节
+    2.用于可识别联合, 用空接口判断类型 interface{}
+</code></pre>
+<p>Goroutinues And Channels</p>
+<pre><code>goroutine
+Channels
+    ch = make(chan int)    create
+    ch &lt;- x         send
+    x = &lt;-ch         receive
+    close(ch)        close
+
+    make(chan int)    unbuffered
+    make(chan int, 3) buffered
+</code></pre>
+<p>Concurrency with Shared Variables</p>
+<pre><code>Race Condition
+    数据竞争会在两个以上的goroutine并发访问相同的变量且至少其中一个为写操作时发生。
+    根据上述定义，有三种方式可以避免数据竞争
+        1.是不要去写变量
+        2.避免从多个goroutine访问变量
+        3.允许很多goroutine去访问变量, 但是在同一个时刻最多只有一个goroutine在访问(“互斥”_)
+Mutex
+    sync.Mutex
+    sync.RWMutex
+    RLock只能在临界区共享变量没有任何写入操作时可用。
+    RWMutex只有当获得锁的大部分goroutine都是读操作，而锁在竞争条件下，也就是说，goroutine们必须等待才能获取到锁的时候，RWMutex才是最能带来好处的。RWMutex需要更复杂的内部记录，所以会让它比一般的无竞争锁的mutex慢一些。
+
+Memory Synchronization
+    所有并发的问题都可以用一致的、简单的既定的模式来规避。所以可能的话，将变量限定在goroutine内部；如果是多个goroutine都需要访问的变量，使用互斥条件来访问。
+
+Lazy Initialization
+    sync.Once
+Race Detector
+    -race
+解决方案:        
+    1.基于互斥量的版本
+    2.基于单独的monitor(channel) goroutine
+
+Goroutines vs Threads
+    1.动态栈
+        2M     Thread fixed size stack
+        2K     Goroutine dynamic size stack
+    2.Scheduling
+        OS kernel, hardware timer, context switch
+        Runtime, channel, mutex (m:n)
+    3.GOMAXPROCS
+        使用的最大的OS thread个数, 默认CPU核心数
+    4.Have no Indentify
+        thread-local storage
+</code></pre>
+<p>Packages and the Go tool</p>
+<pre><code>Imports Paths
+
+The Package Declaration
+
+Import Declarations
+    alternative name
+Blank Imports
+
+Packages and Naming
+    包名一般单数,
+
+Go Tool
+    Workapace Organization
+        $GOPATH
+    Downloading Packages
+        真实地址
+    Building Packages
+
+    Documenting Packages
+        go doc
+        godoc    以web显示文档
+    Internal Package
+        限制能被否被外面的包访问
+    Querying Packages
+        go list
+</code></pre>
+<p>Testing</p>
+<pre><code>Test
+Benchmark
+Example
+
+产品代码
+包内测试
+外部测试包
+
+测试覆盖
+    go test -coverprofile=c.out
+    go tool cover -html=c.out
+</code></pre>
+<p>Reflection</p>
+<pre><code>reflect.Type: 一个接口, reflect.TypeOf 接受任意的 interface{} 类型, 并以reflect.Type形式返回其动态类型
+reflect.Value: reflect.ValueOf 接受任意的 interface{} 类型, 并返回一个装载着其动态值的 reflect.Value.
+
+dynamic type and value
+
+reflect.Value 和 interface{} 都能装载任意的值. 所不同的是, 一个空的接口隐藏了值内部的表示方式和所有方法, 因此只有我们知道具体的动态类型才能使用类型断言来访问内部的值(就像上面那样), 内部值我们没法访问. 相比之下, 一个 Value 则有很多方法来检查其内容, 无论它的具体类型是什么
+</code></pre>
+<p>Low-Level Programming</p>
+<pre><code>unsafe
+cgo
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../lang/go/faq.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../lang/go/http.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../lang/go/faq.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../lang/go/http.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

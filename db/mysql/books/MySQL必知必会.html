@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MySQL必知必会 - notes[D[D[D[D[Dcs notes</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../../favicon.png">
+        
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../preface.html"><strong aria-hidden="true">1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="../../../base/base.html"><strong aria-hidden="true">2.</strong> Base</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../base/bit.html"><strong aria-hidden="true">2.1.</strong> 位操作</a></li><li class="chapter-item expanded "><a href="../../../base/bytes.html"><strong aria-hidden="true">2.2.</strong> 字节</a></li></ol></li><li class="chapter-item expanded "><a href="../../../biz/biz.html"><strong aria-hidden="true">3.</strong> biz</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../biz/follow.html"><strong aria-hidden="true">3.1.</strong> follow</a></li><li class="chapter-item expanded "><a href="../../../biz/live.html"><strong aria-hidden="true">3.2.</strong> live</a></li></ol></li><li class="chapter-item expanded "><a href="../../../db/index.html"><strong aria-hidden="true">4.</strong> DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../db/mysql/index.html"><strong aria-hidden="true">4.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../db/mysql/env.html"><strong aria-hidden="true">4.1.1.</strong> 环境</a></li><li class="chapter-item expanded "><a href="../../../db/mysql/books/MySQL必知必会.html" class="active"><strong aria-hidden="true">4.1.2.</strong> MySQL必知必会</a></li></ol></li><li class="chapter-item expanded "><a href="../../../db/postgre/postgre.html"><strong aria-hidden="true">4.2.</strong> Postgre</a></li><li class="chapter-item expanded "><a href="../../../db/redis/redis.html"><strong aria-hidden="true">4.3.</strong> Redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../db/redis/install.html"><strong aria-hidden="true">4.3.1.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../../../db/redis/cmd.html"><strong aria-hidden="true">4.3.2.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../../db/redis/proxy.html"><strong aria-hidden="true">4.3.3.</strong> Proxy</a></li><li class="chapter-item expanded "><a href="../../../db/redis/faq.html"><strong aria-hidden="true">4.3.4.</strong> FAQ</a></li></ol></li><li class="chapter-item expanded "><a href="../../../db/mongodb/mongodb.html"><strong aria-hidden="true">4.4.</strong> mongoDB</a></li><li class="chapter-item expanded "><a href="../../../db/es/elasticsearch.html"><strong aria-hidden="true">4.5.</strong> elastic</a></li><li class="chapter-item expanded "><a href="../../../db/tidb/tidb.html"><strong aria-hidden="true">4.6.</strong> tidb</a></li><li class="chapter-item expanded "><a href="../../../db/cluster.html"><strong aria-hidden="true">4.7.</strong> 分表</a></li></ol></li><li class="chapter-item expanded "><a href="../../../framework/framework.html"><strong aria-hidden="true">5.</strong> Framework</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../framework/design/design.html"><strong aria-hidden="true">5.1.</strong> design</a></li><li class="chapter-item expanded "><a href="../../../framework/registry/consul.html"><strong aria-hidden="true">5.2.</strong> registry</a></li><li class="chapter-item expanded "><a href="../../../framework/grpc.html"><strong aria-hidden="true">5.3.</strong> grpc</a></li></ol></li><li class="chapter-item expanded "><a href="../../../hardware/hardware.html"><strong aria-hidden="true">6.</strong> Hardware</a></li><li class="chapter-item expanded "><a href="../../../lang/lang.html"><strong aria-hidden="true">7.</strong> Lang</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../lang/go/go.html"><strong aria-hidden="true">7.1.</strong> go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../lang/go/module/module.html"><strong aria-hidden="true">7.1.1.</strong> module</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../lang/go/module/proxy.html"><strong aria-hidden="true">7.1.1.1.</strong> proxy</a></li></ol></li><li class="chapter-item expanded "><a href="../../../lang/go/faq.html"><strong aria-hidden="true">7.1.2.</strong> faq</a></li><li class="chapter-item expanded "><a href="../../../lang/go/GoProgrammingLanguage.html"><strong aria-hidden="true">7.1.3.</strong> 圣经</a></li><li class="chapter-item expanded "><a href="../../../lang/go/http.html"><strong aria-hidden="true">7.1.4.</strong> http</a></li><li class="chapter-item expanded "><a href="../../../lang/go/tool.html"><strong aria-hidden="true">7.1.5.</strong> tool</a></li><li class="chapter-item expanded "><a href="../../../lang/go/install.html"><strong aria-hidden="true">7.1.6.</strong> install</a></li><li class="chapter-item expanded "><a href="../../../lang/go/logrus.html"><strong aria-hidden="true">7.1.7.</strong> logrus</a></li><li class="chapter-item expanded "><a href="../../../lang/go/graceful.html"><strong aria-hidden="true">7.1.8.</strong> Graceful</a></li><li class="chapter-item expanded "><a href="../../../lang/go/generic.html"><strong aria-hidden="true">7.1.9.</strong> Generic</a></li></ol></li><li class="chapter-item expanded "><a href="../../../lang/rust/rust.html"><strong aria-hidden="true">7.2.</strong> rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../lang/rust/memory/memory.html"><strong aria-hidden="true">7.2.1.</strong> 内存</a></li></ol></li><li class="chapter-item expanded "><a href="../../../lang/c/C.html"><strong aria-hidden="true">7.3.</strong> C</a></li><li class="chapter-item expanded "><a href="../../../lang/JavaScript/js-mod.html"><strong aria-hidden="true">7.4.</strong> JS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../lang/JavaScript/js.html"><strong aria-hidden="true">7.4.1.</strong> js</a></li><li class="chapter-item expanded "><a href="../../../lang/JavaScript/js-tool.html"><strong aria-hidden="true">7.4.2.</strong> tool</a></li></ol></li><li class="chapter-item expanded "><a href="../../../lang/php/php.html"><strong aria-hidden="true">7.5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="../../../lang/Markdown/markdown.html"><strong aria-hidden="true">7.6.</strong> Markdown</a></li></ol></li><li class="chapter-item expanded "><a href="../../../network/network.html"><strong aria-hidden="true">8.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../network/protocol/index.html"><strong aria-hidden="true">8.1.</strong> Protocol</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../network/protocol/protobuf.html"><strong aria-hidden="true">8.1.1.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../../../network/protocol/golang-protobuf.html"><strong aria-hidden="true">8.1.2.</strong> golang-protobuf</a></li><li class="chapter-item expanded "><a href="../../../network/protocol/json.html"><strong aria-hidden="true">8.1.3.</strong> JSON</a></li></ol></li><li class="chapter-item expanded "><a href="../../../network/model.html"><strong aria-hidden="true">8.2.</strong> model</a></li><li class="chapter-item expanded "><a href="../../../network/socket.html"><strong aria-hidden="true">8.3.</strong> socket</a></li><li class="chapter-item expanded "><a href="../../../network/io.html"><strong aria-hidden="true">8.4.</strong> io</a></li><li class="chapter-item expanded "><a href="../../../network/faq.html"><strong aria-hidden="true">8.5.</strong> faq</a></li><li class="chapter-item expanded "><a href="../../../network/cluster.html"><strong aria-hidden="true">8.6.</strong> cluster</a></li><li class="chapter-item expanded "><a href="../../../network/lan.html"><strong aria-hidden="true">8.7.</strong> lan</a></li><li class="chapter-item expanded "><a href="../../../network/hardware.html"><strong aria-hidden="true">8.8.</strong> hardware</a></li><li class="chapter-item expanded "><a href="../../../network/link.html"><strong aria-hidden="true">8.9.</strong> link</a></li></ol></li><li class="chapter-item expanded "><a href="../../../os/os.html"><strong aria-hidden="true">9.</strong> OS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../os/proxy/proxy.html"><strong aria-hidden="true">9.1.</strong> proxy</a></li><li class="chapter-item expanded "><a href="../../../os/linux/linux.html"><strong aria-hidden="true">9.2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../os/linux/alpine/alpine.html"><strong aria-hidden="true">9.2.1.</strong> Alpine</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../os/linux/alpine/software.html"><strong aria-hidden="true">9.2.1.1.</strong> software</a></li></ol></li><li class="chapter-item expanded "><a href="../../../os/linux/debian/mirror.html"><strong aria-hidden="true">9.2.2.</strong> Debian</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../os/linux/debian/network.html"><strong aria-hidden="true">9.2.2.1.</strong> 网络</a></li></ol></li><li class="chapter-item expanded "><a href="../../../os/linux/rhel/centos7.html"><strong aria-hidden="true">9.2.3.</strong> RHEL</a></li><li class="chapter-item expanded "><a href="../../../os/linux/net/tool.html"><strong aria-hidden="true">9.2.4.</strong> Net</a></li><li class="chapter-item expanded "><a href="../../../os/linux/install.html"><strong aria-hidden="true">9.2.5.</strong> 安装</a></li><li class="chapter-item expanded "><a href="../../../os/linux/shell/shell.html"><strong aria-hidden="true">9.2.6.</strong> shell</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../os/linux/shell/cmd.html"><strong aria-hidden="true">9.2.6.1.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../../os/linux/shell/args.html"><strong aria-hidden="true">9.2.6.2.</strong> args</a></li></ol></li><li class="chapter-item expanded "><a href="../../../os/linux/disk.html"><strong aria-hidden="true">9.2.7.</strong> Disk</a></li><li class="chapter-item expanded "><a href="../../../os/linux/encode.html"><strong aria-hidden="true">9.2.8.</strong> Encode</a></li><li class="chapter-item expanded "><a href="../../../os/linux/filemode.html"><strong aria-hidden="true">9.2.9.</strong> Filemode</a></li><li class="chapter-item expanded "><a href="../../../os/linux/init.html"><strong aria-hidden="true">9.2.10.</strong> init</a></li><li class="chapter-item expanded "><a href="../../../os/linux/network.html"><strong aria-hidden="true">9.2.11.</strong> 网络</a></li><li class="chapter-item expanded "><a href="../../../os/linux/process.html"><strong aria-hidden="true">9.2.12.</strong> 进程</a></li><li class="chapter-item expanded "><a href="../../../os/linux/ssh.html"><strong aria-hidden="true">9.2.13.</strong> ssh</a></li><li class="chapter-item expanded "><a href="../../../os/linux/terminal.html"><strong aria-hidden="true">9.2.14.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../../../os/linux/version.html"><strong aria-hidden="true">9.2.15.</strong> Version</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../problems/index.html"><strong aria-hidden="true">10.</strong> Problems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/cpu/index.html"><strong aria-hidden="true">10.1.</strong> cpu</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/cpu/2018.12.html"><strong aria-hidden="true">10.1.1.</strong> 2018-12</a></li></ol></li><li class="chapter-item expanded "><a href="../../../problems/im/im.html"><strong aria-hidden="true">10.2.</strong> im</a></li><li class="chapter-item expanded "><a href="../../../problems/mem/mem.html"><strong aria-hidden="true">10.3.</strong> mem</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/mem/2020.04.13.html"><strong aria-hidden="true">10.3.1.</strong> 20200413</a></li><li class="chapter-item expanded "><a href="../../../problems/mem/2020.04.25.html"><strong aria-hidden="true">10.3.2.</strong> 20200425</a></li></ol></li><li class="chapter-item expanded "><a href="../../../problems/net/index.html"><strong aria-hidden="true">10.4.</strong> net</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/net/packetloss.html"><strong aria-hidden="true">10.4.1.</strong> packetloss</a></li><li class="chapter-item expanded "><a href="../../../problems/net/socket/index.html"><strong aria-hidden="true">10.4.2.</strong> socket</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/net/socket/2019.01.html"><strong aria-hidden="true">10.4.2.1.</strong> 201901</a></li><li class="chapter-item expanded "><a href="../../../problems/net/socket/http.html"><strong aria-hidden="true">10.4.2.2.</strong> http</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../problems/redis/index.html"><strong aria-hidden="true">10.5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../problems/redis/2018.05.html"><strong aria-hidden="true">10.5.1.</strong> 201805</a></li><li class="chapter-item expanded "><a href="../../../problems/redis/2018.07.html"><strong aria-hidden="true">10.5.2.</strong> 201807</a></li><li class="chapter-item expanded "><a href="../../../problems/redis/2020.04.html"><strong aria-hidden="true">10.5.3.</strong> 202004</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../vm/vm.html"><strong aria-hidden="true">11.</strong> VM</a></li><li class="chapter-item expanded "><a href="../../../web/web.html"><strong aria-hidden="true">12.</strong> Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../web/browser.html"><strong aria-hidden="true">12.1.</strong> browser</a></li><li class="chapter-item expanded "><a href="../../../web/mobile.html"><strong aria-hidden="true">12.2.</strong> Mobile</a></li><li class="chapter-item expanded "><a href="../../../web/cors.html"><strong aria-hidden="true">12.3.</strong> CORS</a></li><li class="chapter-item expanded "><a href="../../../web/css.html"><strong aria-hidden="true">12.4.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../../../web/http.html"><strong aria-hidden="true">12.5.</strong> HTTP</a></li><li class="chapter-item expanded "><a href="../../../web/UI/react-ui.html"><strong aria-hidden="true">12.6.</strong> UI</a></li><li class="chapter-item expanded "><a href="../../../web/misc.html"><strong aria-hidden="true">12.7.</strong> MISC</a></li></ol></li><li class="chapter-item expanded "><a href="../../../point/point.html"><strong aria-hidden="true">13.</strong> point</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../point/1.html"><strong aria-hidden="true">13.1.</strong> 1</a></li><li class="chapter-item expanded "><a href="../../../point/2.html"><strong aria-hidden="true">13.2.</strong> 2</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tool/tool.html"><strong aria-hidden="true">14.</strong> Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tool/editor/editor.html"><strong aria-hidden="true">14.1.</strong> Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tool/editor/vim.html"><strong aria-hidden="true">14.1.1.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../../tool/editor/vscode.html"><strong aria-hidden="true">14.1.2.</strong> vscode</a></li><li class="chapter-item expanded "><a href="../../../tool/editor/sublime.html"><strong aria-hidden="true">14.1.3.</strong> Sublime</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tool/git/git.html"><strong aria-hidden="true">14.2.</strong> git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tool/git/github.html"><strong aria-hidden="true">14.2.1.</strong> github</a></li></ol></li><li class="chapter-item expanded "><a href="../../../tool/uuid/snowflake.html"><strong aria-hidden="true">14.3.</strong> uuid</a></li><li class="chapter-item expanded "><a href="../../../tool/shadowsocks.html"><strong aria-hidden="true">14.4.</strong> ss</a></li><li class="chapter-item expanded "><a href="../../../tool/ops/ops.html"><strong aria-hidden="true">14.5.</strong> OPS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tool/ops/ci.html"><strong aria-hidden="true">14.5.1.</strong> CI</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../cloud/cloud.html"><strong aria-hidden="true">15.</strong> CloudNative</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/books/Docker源码分析.html"><strong aria-hidden="true">15.1.</strong> books</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/process.html"><strong aria-hidden="true">15.2.</strong> Docker</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/docker/registry/note.html"><strong aria-hidden="true">15.2.1.</strong> registry</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/redis/redis.html"><strong aria-hidden="true">15.2.2.</strong> redis</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/install/fedora.html"><strong aria-hidden="true">15.2.3.</strong> install</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/docker/install/install.html"><strong aria-hidden="true">15.2.3.1.</strong> script</a></li></ol></li><li class="chapter-item expanded "><a href="../../../cloud/docker/history/history.html"><strong aria-hidden="true">15.2.4.</strong> history</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/dockerfile/args.html"><strong aria-hidden="true">15.2.5.</strong> dockerfile</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/docker/dockerfile/go.html"><strong aria-hidden="true">15.2.5.1.</strong> go</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/dockerfile/port.html"><strong aria-hidden="true">15.2.5.2.</strong> port</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/dockerfile/slimming.html"><strong aria-hidden="true">15.2.5.3.</strong> silimming</a></li></ol></li><li class="chapter-item expanded "><a href="../../../cloud/docker/concepts/concepts.html"><strong aria-hidden="true">15.2.6.</strong> concepts</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/cmd/cmd.html"><strong aria-hidden="true">15.2.7.</strong> cmd</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/build/build.html"><strong aria-hidden="true">15.2.8.</strong> build</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/network.html"><strong aria-hidden="true">15.2.9.</strong> network</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/os/os.html"><strong aria-hidden="true">15.2.10.</strong> os</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/docker/os/alpine/alpine.html"><strong aria-hidden="true">15.2.10.1.</strong> alpine</a></li><li class="chapter-item expanded "><a href="../../../cloud/docker/os/debian/debian.html"><strong aria-hidden="true">15.2.10.2.</strong> debian</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../cloud/k8s/cmd.html"><strong aria-hidden="true">15.3.</strong> Kubernetes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../cloud/k8s/config.html"><strong aria-hidden="true">15.3.1.</strong> config</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">notes[D[D[D[D[Dcs notes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#mysql必知必会" id="mysql必知必会">MySQL必知必会</a></h1>
+<h2><a class="header" href="#了解sql" id="了解sql">了解SQL</a></h2>
+<p>数据库是一个以某种组织方式存储的数据集合
+表是一种结构化的文件，可用来存储某种特定类型的数据
+模式（schema） 关于数据库和表的布局及特性的信息</p>
+<p>主键 &lt;=&gt; 非空, 唯一
+任意两行都不具有相同的主键值
+每个行都必须具有一个主键值（主键列不允许NULL值）
+不更新主键列中的值
+不用使用可能会更改的列中做主键</p>
+<h2><a class="header" href="#mysql简介" id="mysql简介">MySQL简介</a></h2>
+<pre><code>DBMS可分为两类：一类为基于共享文件系统的DBMS，另一类为基于客户机—服务器的DBMS
+</code></pre>
+<h2><a class="header" href="#使用mysql" id="使用mysql">使用MySQL</a></h2>
+<pre><code class="language-bash">mysql -u root -p -h localhost -P 3306
+USE DATABASENAME;
+SHOW DATABSASES;
+SHOW TABLES;
+SHOW COLUMNS FROM TABLENAME; &lt;=&gt; DESCRIBE TABLENAME;
+SHOE STATUS;
+SHOW CREATE DATABASE;
+SHOW CREATE TABLE;
+SHOW GRANTS;
+SHOW ERRORS;
+SHOW WARNINGS;
+HELP SHOW; // 显示允许的SHOW语句
+</code></pre>
+<h2><a class="header" href="#检索数据" id="检索数据">检索数据</a></h2>
+<p>SQL不区分大小写:
+许多SQL开发人员喜欢对所有SQL关键字使用大写，而对所有列和表名使用小写，这样做使代码更易于阅读和调试。</p>
+<p>数据表示
+SQL语句一般返回原始的、无格式的数据。数据的格式化是一个表示问题，而不是一个检索问题。因此，表示（对齐和显示上面的价格值，用货币符号和逗号表示其金额）一般在显示该数据的应用程序中规定。一般很少使用实际检索出的原始数据（没有应用程序提供的格式）。
+通配符(<em>)
+一般，除非你确实需要表中的每个列，否则最好别使用</em>通配符。虽然使用通配符可能会使你自己省事，不用明确列出所需列，但检索不需要的列通常会降低检索和应用程序的性能。
+SELECT
+SELECT prod_id FROM products;
+SELECT prod_id, prod_name, prod_price FROM products;
+SELECT * FROM products;
+SELECT DISTINCT vend_id FROM products;</p>
+<p>DISTINCT
+不能部分使用DISTINCT,DISTINCT关键字应用于所有列而不仅是前置它的列。如果给出SELECT DISTINCT vend_id,prod_price，除非指定的两个列都不同，否则所有行都将被检索出来。</p>
+<p>LIMIT
+下标, 数目
+下表从0开始,即行0
+SELECT prod_name FROM products LIMIT 5;
+SELECT prod_name FROM products LIMIT 1, 1;</p>
+<pre><code>LIMIT 4 OFFSET 3意为从行3开始取4行，就像LIMIT 3, 4一样。
+</code></pre>
+<p>完全限定
+使用库名, 表名限定查询</p>
+<h2><a class="header" href="#排序检索数据" id="排序检索数据">排序检索数据</a></h2>
+<p>子句（clause）
+SQL语句由子句构成，有些子句是必需的，而有的是可选的。一个子句通常由一个关键字和所提供的数据组
+ORDER BY
+默认升序(ASC),降序(DESC)
+单个:
+SELECT prod_name FROM products ORDER BY prod_price;升序
+SELECT prod_name FROM products ORDER BY prod_name DESC;降序
+多个:
+SELECT prod_name, prod_price, prod_id FROM products ORDER BY prod_price, prod_name;
+首先按价格，然后再按名称排序。
+仅在多个行具有相同的prod_price值时才对产品按prod_name进行排序
+在多个列上降序排序 如果想在多个列上进行降序排序，必须对每个列指定DESC关键字。
+区分大小写和排序顺序 
+在对文本性的数据进行排序时，A与a相同吗？a位于B之前还是位于Z之后？这些问题不是理论问题，其答案取决于数据库如何设置。在字典（dictionary）排序顺序中，A被视为与a相同，这是MySQL（和大多数数据库管理系统）的默认行为。但是，许多数据库管理员能够在需要时改变这种行为（如果你的数据库包含大量外语字符，可能必须这样做）。
+查找最大的价格
+SELECT prod_price FROM products ORDER BY prod_price DESC LIMIT 1;
+在给出ORDER BY子句时，应该保证它位于FROM子句之后。如果使用LIMIT，它必须位于ORDER BY之后。</p>
+<h2><a class="header" href="#过滤数据" id="过滤数据">过滤数据</a></h2>
+<pre><code>SQL过滤与应用过滤 数据也可以在应用层过滤。为此目的，SQL的SELECT语句为客户机应用检索出超过实际所需的数据，然后客户机代码对返回数据进行循环，以提取出需要的行。通常，这种实现并不令人满意。因此，对数据库进行了优化，以便快速有效地对数据进行过滤。让客户机应用（或开发语言）处理数据库的工作将会极大地影响应用的性能，并且使所创建的应用完全不具备可伸缩性。此外，如果在客户机上过滤数据，服务器不得不通过网络发送多余的数据，这将导致网络带宽的浪费。
+
+在同时使用ORDER BY和WHERE子句时，应该让ORDER BY位于WHERE之后
+
+何时使用引号:
+    单引号用来限定字符串。如果将值与串类型的列进行比较，则需要限定引号。用来与数值列进行比较的值不用引号。
+
+= != &lt;&gt; &lt; &lt;= &gt; &gt;= BETWEEN AND
+IS
+NULL
+    在过滤数据时，一定要验证返回数据中确实给出了被过滤列具有NULL的行。
+</code></pre>
+<h2><a class="header" href="#数据过滤" id="数据过滤">数据过滤</a></h2>
+<pre><code>操作符（operator） 用来联结或改变WHERE子句中的子句的关键字。也称为逻辑操作符（logical operator）
+
+AND, OR
+SELECT prod_name, prod_price FROM products WHERE vend_id = 1003 AND prod_price &lt; 10;
+SELECT prod_name, prod_price FROM products WHERE vend_id = 1002 or vend_id = 1003;
+
+在WHERE子句中使用圆括号 任何时候使用具有AND和OR操作符的WHERE子句，都应该使用圆括号明确地分组操作符。不要过分依赖默认计算次序，即使它确实是你想要的东西也是如此。使用圆括号没有什么坏处，它能消除歧义。
+
+IN
+    SELECT prod_name, prod_price FROM products WHERE vend_id IN(1002, 1003);
+    为什么要使用IN操作符？ 
+        1.在使用长的合法选项清单时，IN操作符的语法更清楚且更直观。
+        2.在使用IN时，计算的次序更容易管理（因为使用的操作符更少）。
+        3.IN操作符一般比OR操作符清单执行更快。
+        4.IN的最大优点是可以包含其他SELECT语句，使得能够更动态地建立WHERE子句。第14章将对此进行详细介绍。
+
+NOT
+    为什么使用NOT？
+        对于简单的WHERE子句，使用NOT确实没有什么优势。但在更复杂的子句中，NOT非常有用的。例如，在与IN操作符联合使用时，NOT使找出与条件列表不匹配的行非常简单。
+    MySQL中的NOT 
+        MySQL支持使用NOT 对IN 、BETWEEN 和EXISTS子句取反，这与多数其他DBMS允许使用NOT对各种条件取反有很大的差别。
+</code></pre>
+<h2><a class="header" href="#通配符进行过滤" id="通配符进行过滤">通配符进行过滤</a></h2>
+<pre><code>通配符（wildcard） 用来匹配值的一部分的特殊字符。
+搜索模式（search pattern）由字面值、通配符或两者组合构成的搜索条件。
+通配符本身实际是SQL的WHERE子句中有特殊含义的字符。
+
+
+LIKE    
+    SELECT prod_id, prod_name FROM products WHERE prod_name LIKE 'jet%';
+
+通配符
+    %, _,
+    %并不能匹配NULL
+
+技巧:
+    不要过度使用通配符
+    在确实需要使用通配符时，除非绝对有必要，否则不要把它们用在搜索模式的开始处
+    仔细注意通配符的位置
+</code></pre>
+<h2><a class="header" href="#正则表达式进行搜索" id="正则表达式进行搜索">正则表达式进行搜索</a></h2>
+<pre><code>SELECT prod_name FROM products WHERE prod_name REGEXP 'JetPack .000';
+分区分大小写:
+    BINARY
+SELECT prod_name FROM products WHERE prod_name REGEXP BINARY 'JetPack .000';
+
+| [] \\r(转义字符) [:alnum:](匹配字符类) 元字符 定位符
+
+测试正则表达式
+    SELECT 'hello' REGXP '[0-9]';
+    SELECT Trim('abc');
+    SELECT 2 * 3;
+    SELECT Now();
+</code></pre>
+<h2><a class="header" href="#创建计算字段" id="创建计算字段">创建计算字段</a></h2>
+<pre><code>Concat()
+    拼接（concatenate） 将值联结到一起构成单个值。
+    SELECT Concat(vend_name, '(', vend_country, ')') FROM vendors ORDER BY vend_name;
+
+Trim(), RTrim(), LTrim()
+    SELECT Concat(RTrim(vend_name), '(', vend_country, ')') FROM vendors ORDER BY vend_name;
+
+alias别名
+    SELECT Concat(RTrim(vend_name), '(', vend_country, ')') AS vend_title FROM vendors ORDER BY vend_name;
+算术运算
+    + - * /
+    SELECT prod_id, quantity, item_price FROM orderitems WHERE order_num = 20005;
+    SELECT prod_id, quantity, item_price, quantity * item_price AS expanded_price FROM orderitems WHERE order_num = 20005;
+</code></pre>
+<h2><a class="header" href="#使用数据处理函数" id="使用数据处理函数">使用数据处理函数</a></h2>
+<pre><code>Left() 返回串左边的字符
+Length() 返回串的长度
+Locate() 找出串的一个子串
+Lower() 将串转换为小写
+LTrim() 去掉串左边的空格
+Right() 返回串右边的字符
+RTrim() 去掉串右边的空格
+Soundex() 返回串的SOUNDEX值
+SubString() 返回子串的字符
+Upper() 将串转换为大写
+
+SELECT prod_name, Upper(prod_name) AS prod_name_upcase FROM products;
+
+SELECT cust_name, cust_contact FROM customers WHERE cust_contact = 'Y. Lie';
+SELECT cust_name, cust_contact FROM customers WHERE SOUNDEX(cust_contact) = SOUNDEX('Y. Lie');
+
+
+日期时间
+    SELECT cust_id, order_num FROM orders WHERE order_date = '2005-09-01';
+    SELECT cust_id, order_num FROM orders WHERE Date(order_date) = '2005-09-01';
+    SELECT cust_id, order_num FROM orders WHERE Date(order_date) BETWEEN '2005-09-01' AND '2005-09-30';
+    SELECT cust_id, order_num FROM orders WHERE Year(order_date) = 2005 AND Month(order_date) = 9;
+
+数值函数
+    Abs() 返回一个数的绝对值
+    Cos() 返回一个角度的余弦
+    Exp() 返回一个数的指数值
+    Mod() 返回除操作的余数
+    Pi() 返回圆周率
+    Rand() 返回一个随机数
+    Sin() 返回一个角度的正弦
+    Sqrt() 返回一个数的平方根
+    Tan() 返回一个角度的正切
+</code></pre>
+<h2><a class="header" href="#汇总数据" id="汇总数据">汇总数据</a></h2>
+<pre><code>聚集函数（aggregate function） 运行在行组上，计算和返回单个值的函数。
+    AVG() 返回某列的平均值
+    COUNT() 返回某列的行数
+    MAX() 返回某列的最大值
+    MIN() 返回某列的最小值
+    SUM() 返回某列值之和
+SELECT AVG(prod_price) AS avg_price FROM products;
+AVG()函数忽略列值为NULL的行。
+
+SELECT COUNT(*) AS num_cust FROM customers;
+SELECT COUNT(cust_email) AS num_cust FROM customers;
+NULL值 如果指定列名，则指定列的值为空的行被COUNT()函数忽略，但如果COUNT()函数中用的是星号（*），则不忽略。
+
+SELECT MAX(prod_price) AS max_price FROM products; 
+对非数值数据使用MAX() 虽然MAX()一般用来找出最大的数值或日期值，但MySQL允许将它用来返回任意列中的最大值，包括返回文本列中的最大值。在用于文本数据时，如果数据按相应的列排序，则MAX()返回最后一行。
+NULL值 MAX()函数忽略列值为NULL的行。
+
+SELECT SUM(quantity) AS item_ordered FROM orderitems WHERE order_num = 20005;
+NULL值 SUM()函数忽略列值为NULL的行。
+
+DISTINCT
+    SELECT AVG(DISTINCT prod_price) AS avg_price FROM products;
+</code></pre>
+<h2><a class="header" href="#分组数据" id="分组数据">分组数据</a></h2>
+<pre><code>GROUP BY
+    SELECT vend_id, COUNT(*) FROM products GROUP BY vend_id;
+    规定:
+        1.GROUP BY子句可以包含任意数目的列。这使得能对分组进行嵌套，为数据分组提供更细致的控制。
+        2.如果在GROUP BY子句中嵌套了分组，数据将在最后规定的分组上    进行汇总。换句话说，在建立分组时，指定的所有列都一起计算    （所以不能从个别的列取回数据）。
+        3.GROUP BY子句中列出的每个列都必须是检索列或有效的表达式    （但不能是聚集函数）。如果在SELECT中使用表达式，则必须在
+        4.GROUP BY子句中指定相同的表达式。不能使用别名。 除聚集计算语句外，SELECT语句中的每个列都必须在GROUP BY子句中给出。
+        5.如果分组列中具有NULL值，则NULL将作为一个分组返回。如果列    中有多行NULL值，它们将分为一组。
+         6.GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
+
+HAVING
+    目前为止所学过的所有类型的WHERE子句都可以用HAVING来替代。唯一的差别是WHERE过滤行，而HAVING过滤分组。
+
+    WHERE在数据分组前进行过滤，HAVING在数据分组后进行过滤。这是一个重要的区别，WHERE排除的行不包括在分组中。这可能会改变计算值，从而影响HAVING子句中基于这些值过滤掉的分组。
+
+    SELECT cust_id, COUNT(*) FROM orders GROUP BY cust_id HAVING COUNT(*) &gt;= 2;
+    SELECT vend_id, COUNT(*) FROM products WHERE prod_price &gt;= 10 GROUP BY vend_id HAVING COUNT(*) &gt;= 2;
+
+ORDER BY与GROUP BY
+    ORDER BY
+        排序产生的输出                          
+        任意列都可以使用（甚至非选择的列也可以使用）
+        不一定需要    
+    GROUP BY        
+        分组行。但输出可能不是分组的顺序
+        只可能使用选择列或表达式列，而且必须使用每个选择列表达式
+        如果与聚集函数一起使用列（或表达式），则必须使用
+
+SELECT子句顺序
+    子 句         说 明                         是否必须使用
+    SELECT         要返回的列或表达式             是
+    FROM         从中检索数据的表             仅在从表选择数据时使用
+    WHERE         行级过滤                     否
+    GROUP BY     分组说明                     仅在按组计算聚集时使用
+    HAVING         组级过滤                     否
+    ORDER BY     输出排序顺序                 否
+    LIMIT         要检索的行数                 否
+</code></pre>
+<h2><a class="header" href="#子查询" id="子查询">子查询</a></h2>
+<pre><code>SELECT cust_name, cust_contact FROM customers WHERE cust_id IN (
+    SELECT cust_id FROM orders WHERE order_num IN (
+        SELECT order_num FROM orderitems WHERE prod_id = 'TNT2'));
+
+
+相关子查询（correlated subquery） 涉及外部查询的子查询。
+SELECT cust_name, cust_state, (SELECT COUNT(*) FROM orders WHERE orders.cust_id = customers.cust_id) AS orders FROM customers ORDER BY cust_name;
+</code></pre>
+<h2><a class="header" href="#连接表" id="连接表">连接表</a></h2>
+<pre><code>WHERE
+    SELECT vend_name, prod_name, prod_price FROM vendors, products WHERE vendors.vend_id = products.vend_id ORDER BY vend_name, prod_name;
+
+笛卡儿积（cartesian product） 由没有联结条件的表关系返回的结果为笛卡儿积。检索出的行的数目将是第一个表中的行数乘以第二个表中的行数。
+
+内部连接
+    SELECT vend_name, prod_name, prod_price FROM vendors INNER JOIN products ON vendors.vend_id = products.vend_id ORDER BY vend_name, prod_name;
+使用哪种语法
+    ANSI SQL规范首选INNER JOIN语法。此外，尽管使用WHERE子句定义联结的确比较简单，但是使用明确的联结语法能够确保不会忘记联结条件，有时候这样做也能影响性能。
+多个表连接
+    SELECT prod_name, vend_name, prod_price, quantity FROM orderitems, products, vendors WHERE products.vend_id = vendors.vend_id AND orderitems.prod_id = products.prod_id AND order_num = 20005;
+正如第14章所述，子查询并不总是执行复杂SELECT操作的最有效的方法，下面是使用联结的相同查询：
+    SELECT cust_name, cust_contact FROM customers, orders, orderitems WHERE customers.cust_id = orders.cust_id AND orders.order_num = orderitems.order_num AND prod_id = 'TNT2';
+</code></pre>
+<h2><a class="header" href="#高级连接" id="高级连接">高级连接</a></h2>
+<pre><code>表别名只在查询执行中使用。与列别名不一样，表别名不返回到客户机。
+
+等值联结
+自然联结&lt;=&gt;内部连接                
+外部联结，左外连接，右外连接，全连接
+
+SELECT p1.prod_id, p1.prod_name FROM products AS p1, products AS p2 WHERE p1.vend_id = p2.vend_id AND p2.prod_id = 'DTNTR';
+    用自联结而不用子查询 自联结通常作为外部语句用来替代从相同表中检索数据时使用的子查询语句。虽然最终的结果是相同的，但有时候处理联结远比处理子查询快得多。应该试一下两种方法，以确定哪一种的性能更好。
+
+SELECT c.*, o.order_num, o.order_date, oi.prod_id, oi.quantity, oi.item_price FROM customers AS c, orders AS o, orderitems AS oi WHERE c.cust_id = o.cust_id AND oi.order_num = o.order_num AND prod_id = 'FB';
+    自然联结排除多次出现，使每个列只返回一次。迄今为止我们建立的每个内部联结都是自然联结，很可能我们永远都不会用到不是自然联结的内部联结。
+
+SELECT customers.cust_id, orders.order_num FROM customers LEFT OUTER JOIN orders ON customers.cust_id = orders.cust_id;
+SELECT customers.cust_id, orders.order_num FROM customers RIGHT OUTER JOIN orders ON customers.cust_id = orders.cust_id;
+    外部联结的类型 存在两种基本的外部联结形式：左外部联结和右外部联结。它们之间的唯一差别是所关联的表的顺序不同。换句话说，左外部联结可通过颠倒FROM或WHERE子句中表的顺序转换为右外部联结。因此，两种类型的外部联结可互换使用，而究竟使用哪一种纯粹是根据方便而定。
+</code></pre>
+<h2><a class="header" href="#组合查询" id="组合查询">组合查询</a></h2>
+<pre><code>多数SQL查询都只包含从一个或多个表中返回数据的单条SELECT语句。MySQL也允许执行多个查询（多条SELECT语句），并将结果作为单个查询结果集返回。这些组合查询通常称为并（union）或复合查询（compound query）。
+
+有两种基本情况，其中需要使用组合查询：
+在单个查询中从不同的表返回类似结构的数据；
+对单个表执行多个查询，按单个查询返回数据。
+
+如果遵守了这些基本规则或限制，则可以将并用于任何数据检索任务。
+    1.UNION必须由两条或两条以上的SELECT语句组成，语句之间用关键字UNION分隔（因此，如果组合4条SELECT语句，将要使用3个UNION关键字）。
+    2.UNION中的每个查询必须包含相同的列、表达式或聚集函数（不过各个列不需要以相同的次序列出）。
+    3.列数据类型必须兼容：类型不必完全相同，但必须是DBMS可以隐含地转换的类型（例如，不同的数值类型或不同的日期类型）。
+UNION从查询结果集中自动去除了重复的行，这是UNION的默认行为，但是如果需要，可以改变它。事实上，如果想返回所有匹配行，可使用UNION ALL而不是UNION。
+SELECT语句的输出用ORDER BY子句排序。在用UNION组合查询时，只能使用一条ORDER BY子句，它必须出现在最后一条SELECT语句之后。
+</code></pre>
+<h2><a class="header" href="#全文本搜索" id="全文本搜索">全文本搜索</a></h2>
+<pre><code>两个最常使用的引擎为MyISAM和InnoDB，前者支持全文本搜索，而后者不支持。
+
+不要在导入数据时使用FULLTEXT
+    更新索引要花时间，虽然不是很多，但毕竟要花时间。如果正在导入数据到一个新表，此时不应该启用FULLTEXT索引。应该首先导入所有数据，然后再修改表，定义FULLTEXT。这样有助于更快地导入数据（而且使索引数据的总时间小于在导入每行时分别进行索引所需的总时间）。
+使用两个函数Match()和Against()执行全文本搜索
+ SELECT note_text FROM productnotes WHERE MATCH(note_text) Against('rabbit');
+使用完整的Match() 说明 传递给Match() 的值必须与FULLTEXT()定义中的相同。如果指定多个列，则必须列出它们（而且次序正确）。
+
+搜索不区分大小写除非使用BINARY方式（本章中没有介绍），否则全文本搜索不区分大小写。
+
+正如所见，全文本搜索提供了简单LIKE搜索不能提供的功能。而且，由于数据是索引的，全文本搜索还相当快。
+
+查询扩展
+布尔文本搜索
+</code></pre>
+<h2><a class="header" href="#插入数据" id="插入数据">插入数据</a></h2>
+<pre><code>总是使用列的列表 一般不要使用没有明确给出列的列表的INSERT语句。使用列的列表能使SQL代码继续发挥作用，即使表结构发生了变化。
+
+提高INSERT的性能 此技术可以提高数据库处理的性能，因为MySQL用单条INSERT语句处理多个插入比使用多条INSERT语句快。
+INSERT SELECT中SELECT语句可包含WHERE子句以过滤插入的数据。
+</code></pre>
+<h2><a class="header" href="#更新和删除数据" id="更新和删除数据">更新和删除数据</a></h2>
+<pre><code>删除表的内容而不是表，DELETE语句从表中删除行，甚至是删除表中所有行。但是，DELETE不删除表本身。
+更快的删除 
+    如果想从表中删除所有行，不要使用DELETE。可使用TRUNCATE TABLE语句，它完成相同的工作，但速度更快（TRUNCATE实际是删除原来的表并重新创建一个表，而不是逐行删除表中的数据）
+</code></pre>
+<h2><a class="header" href="#创建和操纵表" id="创建和操纵表">创建和操纵表</a></h2>
+<pre><code>InnoDB是一个可靠的事务处理引
+MEMORY在功能等同于MyISAM，但由于数据存储在内存（不是磁盘）中，速度很快（特别适合于临时表）
+MyISAM是一个性能极高的引擎，它支持全文本搜索，但不支持事务处理。
+
+外键不能跨引擎 混用引擎类型有一个大缺陷。外键（用于强制实施引用完整性，如第1章所述）不能跨引擎，即使用一个引擎的表不能引用具有使用不同引擎的表的外键。
+</code></pre>
+<h2><a class="header" href="#视图" id="视图">视图</a></h2>
+<pre><code>视图是虚拟的表。与包含数据的表不一样，视图只包含使用时动态检索数据的查询。
+
+视图用CREATE VIEW语句来创建。使用SHOW CREATE VIEW viewname；来查看创建视图的语句。 用DROP删除视图，其语法为DROP VIEW viewname; 更新视图时，可以先用DROP再用CREATE，也可以直接用CREATE OR REPLACE VIEW。如果要更新的视图不存在，则第2条更新语句会创建一个视图；如果要更新的视图存在，则第2条更新语句会替换原有视图。
+
+本章许多例子中的视图都是不可更新的。这听上去好像是一个严重的限制，但实际上不是，因为视图主要用于数据检索。应该将视图用于检索（SELECT语句）而不用于更新（INSERT、UPDATE和DELETE）。
+</code></pre>
+<h2><a class="header" href="#存储过程" id="存储过程">存储过程</a></h2>
+<pre><code>存储过程简单来说，就是为以后的使用而保存的一条或多条MySQL语句的集合。可将其视为批文件，虽然它们的作用不仅限于批处理。
+换句话说，使用存储过程有3个主要的好处，即简单、安全、高性能。
+</code></pre>
+<h2><a class="header" href="#游标" id="游标">游标</a></h2>
+<pre><code>指向查询的结果集
+</code></pre>
+<h2><a class="header" href="#触发器" id="触发器">触发器</a></h2>
+<pre><code>它们都需要在某个表发生更改时自动处理。这确切地说就是触发器。触发器是MySQL响应以下任意语句而自动执行的一条MySQL语句（或位于BEGIN和END语句之间的一组语句）：
+DELETE；
+INSERT；
+UPDATE。
+其他MySQL语句不支持触发器。
+</code></pre>
+<h2><a class="header" href="#事务" id="事务">事务</a></h2>
+<pre><code>事务处理（transaction processing）可以用来维护数据库的完整性，它保证成批的MySQL操作要么完全执行，要么完全不执行。
+
+事务（transaction）指一组SQL语句；
+     回退（rollback）指撤销指定SQL语句的过程；
+    提交（commit）指将未存储的SQL语句结果写入数据库表；
+保留点（savepoint）指事务处理中设置的临时占位符（placeholder），你可以对它发布回退（与回退整个事务处理不同）
+
+哪些语句可以回退？ 
+    事务处理用来管理INSERT、UPDATE和DELETE语句。你不能回退SELECT语句。（这样做也没有什么意义。）你不能回退CREATE或DROP操作。事务处理块中可以使用这两条语句，但如果你执行回退，它们不会被撤销。
+
+
+隐含事务关闭当COMMIT或ROLLBACK语句执行后，事务会自动关闭（将来的更改会隐含提交）。
+释放保留点保留点在事务处理完成（执行一条ROLLBACK或COMMIT）后自动释放。自MySQL 5以来，也可以用RELEASE SAVEPOINT明确地释放保留点。
+
+START TANSACTION    ROLLBACK     COMMIT     SAVEPOINT    ROLLBACK TO
+
+标志为连接专用 autocommit标志是针对每个连接而不是服务器的。
+SET autocommit = 0
+
+ACID，是指数据库管理系统（DBMS）在写入或更新资料的过程中，为保证事务（transaction）是正确可靠的，所必须具备的四个特性：原子性（atomicity，或称不可分割性）、一致性（consistency）、隔离性（isolation，又称独立性）、持久性（durability）。
+</code></pre>
+<h2><a class="header" href="#全球化和本地化" id="全球化和本地化">全球化和本地化</a></h2>
+<pre><code class="language-sh">SHOW CHARACTER SET; SHOW COLLATION;
+SHOW VARIABLES LIKE 'character%';
+SHOW VARIABLES LIKE 'collation%';
+</code></pre>
+<h2><a class="header" href="#安全管理" id="安全管理">安全管理</a></h2>
+<p>安全</p>
+<pre><code class="language-sh">CREATE USER rrf IDENTIFIED BY 'password';
+RENAME USER rrf TO ruifeng;
+DROP USER rrf;
+SHOW GRANTS FOR rrf;
+GRANT SELECT ON test.* TO rrf;
+REVOKE SELECT ON test.* TO rrf;
+</code></pre>
+<p>整个服务器，使用GRANT ALL和REVOKE ALL；
+整个数据库，使用ON database.*；
+特定的表，使用ON database.table；
+特定的列；
+特定的存储过程。</p>
+<p>SET PASSWORD FOR rrf = Password('123456');</p>
+<h2><a class="header" href="#数据库维护" id="数据库维护">数据库维护</a></h2>
+<pre><code>FLUSH TABLES;
+ANALYZE TABLE orders;
+日志
+</code></pre>
+<h2><a class="header" href="#改善性能" id="改善性能">改善性能</a></h2>
+<pre><code>应该总是使用正确的数据类型。
+    决不要检索比需求还要多的数据。换言之，不要用SELECT *（除非你真正需要每个列）。
+有的操作（包括INSERT）支持一个可选的DELAYED关键字，如果使用它，将把控制立即返回给调用程序，并且一旦有可能就实际执行该操作。
+在导入数据时，应该关闭自动提交。你可能还想删除索引（包括FULLTEXT索引），然后在导入完成后再重建它们。
+LIKE很慢。一般来说，最好是使用FULLTEXT而不是LIKE。
+最重要的规则就是，每条规则在某些条件下都会被打破。
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../../db/mysql/env.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../../db/postgre/postgre.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../../db/mysql/env.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../../db/postgre/postgre.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
