@@ -17,7 +17,7 @@ jobs:
       run: cargo run -- build
     - name: Deploy to GitHub
       env:
-        GITHUB_DEPLOY_KEY: ${{ secrets.GITHUB_DEPLOY_KEY }}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
         touch book/.nojekyll
         curl -LsSf https://raw.githubusercontent.com/rust-lang/simpleinfra/master/setup-deploy-keys/src/deploy.rs | rustc - -o /tmp/deploy
